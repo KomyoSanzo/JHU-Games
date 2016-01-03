@@ -32,8 +32,16 @@ public class PlayerScript : MonoBehaviour
         print("Gravity: " + gravity + " Jump Velocity: " + jumpVelocity);
     }
 
+    void Update()
+    {
+        if (!controller.collisions.below && anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            anim.Play("flying");
+
+    }
     void FixedUpdate()
     {
+        
+
         if (controller.collisions.above || controller.collisions.below)
             velocity.y = 0;
 
