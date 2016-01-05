@@ -4,7 +4,7 @@ using System.Collections;
 public class WeaponsScript : MonoBehaviour {
 
     public float shootCooldown = .4f;
-    public float projectileSpeed = 3;
+    public float projectileSpeed = 1f;
     float shootingRange = 0.25f;
     float shootTimer;
     

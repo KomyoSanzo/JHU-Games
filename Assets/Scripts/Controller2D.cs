@@ -33,6 +33,7 @@ public class Controller2D : RayCastController
         }
 
         transform.Translate(velocity);
+    
         if (standingOnPlatform)
         {
             collisions.below = true;

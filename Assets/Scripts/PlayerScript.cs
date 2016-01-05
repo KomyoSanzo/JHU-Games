@@ -31,6 +31,9 @@ public class PlayerScript : MonoBehaviour
     //INTERNAL VARIABLE DECLRATAIONS
     float gravity;
     float jumpVelocity;
+
+    public AudioClip[] audioClips;
+
     [HideInInspector] public bool facingRight;
 
 
@@ -38,9 +41,11 @@ public class PlayerScript : MonoBehaviour
 
     Controller2D controller;
     Animator anim;
+    AudioSource audioPlayer;
     
     void Start()
     {
+        audioPlayer = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         facingRight = true;
         controller = GetComponent<Controller2D>();
@@ -70,8 +75,17 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && controller.collisions.below)
         {
             velocity.y = jumpVelocity;
+            audioPlayer.clip = audioClips[6];
+            audioPlayer.Play();
         }
         
+        if (input.x != 0 && controller.collisions.below && !audioPlayer.isPlaying)
+        {
+
+            audioPlayer.clip = audioClips[Random.Range(4, 6)];
+            audioPlayer.Play();
+            
+        }
 
         float targetVelocityX = input.x * moveSpeed;
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
@@ -121,17 +135,19 @@ public class PlayerScript : MonoBehaviour
             {
                 if (dashRight)
                 {
-                    velocity.x += 30;
-                    velocity.y += 0;
+                    velocity.x = 30;
+                    velocity.y = 10;
                 }
                 else
                 {
-                    velocity.x -= 30;
-                    velocity.y += 0;
+                    velocity.x = -30;
+                    velocity.y = 10;
                 }
                 dashCurrentCooldown = dashCooldown;
-
+                audioPlayer.clip = audioClips[0];
+                audioPlayer.Play();
                 print("double tapped!");
+                anim.Play("dashAnimation");
             }
             else
             {
