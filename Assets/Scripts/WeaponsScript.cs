@@ -16,7 +16,7 @@ public class WeaponsScript : MonoBehaviour {
     {
         shootTimer = 0f;
         anim = GetComponent<Animator>();
-        print(shootCooldown);
+
         playerInformation = GetComponent<PlayerScript>();
 	}
 	
@@ -38,8 +38,6 @@ public class WeaponsScript : MonoBehaviour {
                 shootTimer = shootCooldown;
                 Attack();
             }
-            else
-                print(shootTimer);
         }
         
 	}

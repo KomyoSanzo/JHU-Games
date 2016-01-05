@@ -6,14 +6,14 @@ public class Controller2D : RayCastController
 
     public CollisionInfo collisions;
 
-    public float maxClimbingAngle = 40;
+    public float maxClimbingAngle = 80;
     public float maxDescentAngle = 50;
 
     public override void Start()
     {
         base.Start();
     }
-    public void Move(Vector3 velocity)
+    public void Move(Vector3 velocity, bool standingOnPlatform = false)
     {
         UpdateRaycastOrigins();
         collisions.Reset();
@@ -33,6 +33,10 @@ public class Controller2D : RayCastController
         }
 
         transform.Translate(velocity);
+        if (standingOnPlatform)
+        {
+            collisions.below = true;
+        }
     }
 
     void HorizontalCollisions(ref Vector3 velocity)
@@ -50,7 +54,10 @@ public class Controller2D : RayCastController
 
             if (hit)
             {
-
+                if (hit.distance == 0)
+                {
+                    continue;
+                }
                 float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
 
                 if (i == 0 && slopeAngle <= maxClimbingAngle)
