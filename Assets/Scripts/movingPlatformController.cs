@@ -23,6 +23,7 @@ public class movingPlatformController : RayCastController {
 
         Vector3 velocity = move * Time.deltaTime;
         CalculateMovement(velocity);
+        Debug.Log("Velocity: " + velocity);
         MovePassengers(true);
         transform.Translate(velocity);
         MovePassengers(false);
