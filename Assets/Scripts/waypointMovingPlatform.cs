@@ -10,8 +10,9 @@ public class waypointMovingPlatform : RayCastController
     //Add pauses between waypoints
     //Use splines
 
-    public Vector3 move;
     public LayerMask passengerMask;
+    List<PassengerMovement> pMovements;
+    Dictionary<Transform, Controller2D> pDict = new Dictionary<Transform, Controller2D>();
 
     public float speed = 1.0F;
     public float waitAtWaypointTime = 1.0F;
@@ -22,8 +23,15 @@ public class waypointMovingPlatform : RayCastController
     private float journeyLength;
 
     private Transform startMarker, endMarker;
+
     private bool isReversed = false;
+
+    //Check when to stop moving the platform
+    private bool isStopped = false;
+
+    //Which index was the last waypoint?
     int currentStartPoint;
+
     public override void Start()
     {
         base.Start();
@@ -34,42 +42,83 @@ public class waypointMovingPlatform : RayCastController
 
     void SetPoints()
     {
+        //If you reached the end of your travels loop the other way if 
         if(currentStartPoint == waypoints.Length-1)
         {
-            Array.Reverse(waypoints);
-            currentStartPoint = 0;
-            isReversed = !isReversed;
+            if (loop)
+            {
+                Array.Reverse(waypoints);
+                currentStartPoint = 0;
+                isReversed = !isReversed;
+            } else
+            {
+                isStopped = true;
+            }
+            
+        } else
+        {
+            startMarker = waypoints[currentStartPoint].transform;
+            endMarker = waypoints[currentStartPoint + 1].transform;
+            startTime = Time.time;
+            journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
         }
-        startMarker = waypoints[currentStartPoint].transform;
-        endMarker = waypoints[currentStartPoint + 1].transform;
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
+
+
     }
 
     void Update()
     {
-        float distCovered = (Time.time - startTime) * speed;
-        float fracJourney = distCovered / journeyLength;
-        Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
-        Vector3 velocity = lerpVal - transform.position;
-        Debug.Log("transform pos: " + transform.position + " lerpVal: " + lerpVal + " velocity " + velocity);
-        Debug.Log("Comparing vectors: " + (lerpVal == velocity));
-        transform.position = lerpVal;
-        //Calculate the velocity to use in MovePassengers function because i don't want to modify 
-        //The move passengers function
-
-        MovePassengers(velocity);
-        if (fracJourney >= 1f )
+        if (isStopped == false)
         {
-            currentStartPoint++;
-            SetPoints();
-        } 
+            float distCovered = (Time.time - startTime) * speed;
+            float fracJourney = distCovered / journeyLength;
+
+            //Get the next position the platform should be in between two points
+            Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+            //Calculate velocity (after pos - before pos)
+            Vector3 velocity = lerpVal - transform.position;
+
+            //Debug.Log("transform pos: " + transform.position + " lerpVal: " + lerpVal + " velocity " + velocity);
+            //Debug.Log("Comparing vectors: " + (lerpVal == velocity));
+
+            //Willis's Code calls
+            UpdateRaycastOrigins();
+            CalculateMovement(velocity);
+            MovePassengers(true);
+            transform.Translate(velocity);
+            MovePassengers(false);
+
+            //Continue the journey to the next waypoint
+            if (fracJourney >= 1f)
+            {
+                currentStartPoint++;
+                SetPoints();
+            }
+        }
+        
 
     }
 
-    void MovePassengers(Vector3 velocity)
+    void MovePassengers(bool beforeMovePlatform)
+    {
+        foreach (PassengerMovement passenger in pMovements)
+        {
+            if (!pDict.ContainsKey(passenger.transform))
+            {
+                pDict.Add(passenger.transform, passenger.transform.GetComponent<Controller2D>());
+            }
+            if (passenger.moveBefore == beforeMovePlatform)
+            {
+                pDict[passenger.transform].Move(passenger.velocity, passenger.standing);
+            }
+        }
+    }
+    void CalculateMovement(Vector3 velocity)
     {
         HashSet<Transform> movedPassengers = new HashSet<Transform>();
+        pMovements = new List<PassengerMovement>();
 
         float directionX = Mathf.Sign(velocity.x);
         float directionY = Mathf.Sign(velocity.y);
@@ -94,6 +143,8 @@ public class waypointMovingPlatform : RayCastController
                         float pushY = velocity.y - (hit.distance - skinWidth) * directionY;
                         hit.transform.Translate(new Vector3(pushX, pushY));
 
+
+                        pMovements.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), directionY == 1, true));
                     }
                 }
             }
@@ -111,21 +162,21 @@ public class waypointMovingPlatform : RayCastController
                 RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, passengerMask);
                 if (hit)
                 {
-
                     if (!movedPassengers.Contains(hit.transform))
                     {
                         movedPassengers.Add(hit.transform);
                         float pushX = velocity.x - (hit.distance - skinWidth) * directionX;
-                        float pushY = 0;
-                        hit.transform.Translate(new Vector3(pushX, pushY));
-                        Debug.Log("moving");
+                        float pushY = -skinWidth;
+
+                        pMovements.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), false, true));
                     }
                 }
 
             }
         }
+
         //Passenger on Top of horizontal or downward moving platform
-        if (directionY == -1 || velocity.x != 0.0F)
+        if (directionY == -1 || velocity.x != 0)
         {
             float rayLength = skinWidth * 2;
 
@@ -136,18 +187,32 @@ public class waypointMovingPlatform : RayCastController
 
                 if (hit)
                 {
-                    Debug.Log("triggered");
-
                     if (!movedPassengers.Contains(hit.transform))
                     {
                         movedPassengers.Add(hit.transform);
                         float pushX = velocity.x;
                         float pushY = velocity.y;
-                        hit.transform.Translate(new Vector3(pushX, pushY));
 
+                        pMovements.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), true, false));
                     }
                 }
             }
+        }
+    }
+
+    struct PassengerMovement
+    {
+        public Transform transform;
+        public Vector3 velocity;
+        public bool standing;
+        public bool moveBefore;
+
+        public PassengerMovement(Transform trans, Vector3 vel, bool stand, bool move)
+        {
+            transform = trans;
+            velocity = vel;
+            standing = stand;
+            moveBefore = move;
         }
     }
 }
