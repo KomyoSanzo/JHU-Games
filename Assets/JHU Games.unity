@@ -316,11 +316,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11428564, guid: 18be9a6e33362194885ac3934db31826, type: 2}
       propertyPath: move.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11428564, guid: 18be9a6e33362194885ac3934db31826, type: 2}
       propertyPath: move.x
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11428564, guid: 18be9a6e33362194885ac3934db31826, type: 2}
       propertyPath: m_Enabled
@@ -387,7 +387,7 @@ MonoBehaviour:
   passengerMask:
     serializedVersion: 2
     m_Bits: 256
-  speed: 1
+  speed: 4
   waitAtWaypointTime: 1
   loop: 1
   waypoints:
