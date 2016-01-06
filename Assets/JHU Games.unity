@@ -386,7 +386,7 @@ MonoBehaviour:
     m_Bits: 256
   speed: 1
   waitAtWaypointTime: 1
-  loop: 1
+  loop: 0
   waypoints:
   - {fileID: 1481586169}
   - {fileID: 1656093391}
@@ -655,7 +655,7 @@ GameObject:
   m_Layer: 0
   m_Name: waypoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 5228209130450103505, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8467475693731670952, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
