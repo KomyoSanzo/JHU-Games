@@ -50,6 +50,11 @@ public class waypointMovingPlatform : RayCastController
                 Array.Reverse(waypoints);
                 currentStartPoint = 0;
                 isReversed = !isReversed;
+
+                startMarker = waypoints[currentStartPoint].transform;
+                endMarker = waypoints[currentStartPoint + 1].transform;
+                startTime = Time.time;
+                journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
             } else
             {
                 isStopped = true;

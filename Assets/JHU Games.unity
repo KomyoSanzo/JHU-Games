@@ -240,6 +240,10 @@ Prefab:
       propertyPath: projectileSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11467492, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
+      propertyPath: collisionMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
   m_IsPrefabParent: 0
@@ -380,13 +384,12 @@ MonoBehaviour:
   horizontalSpacing: 0
   verticalSpacing: 0
   collision: {fileID: 0}
-  move: {x: 0, y: 0, z: 0}
   passengerMask:
     serializedVersion: 2
     m_Bits: 256
   speed: 1
   waitAtWaypointTime: 1
-  loop: 0
+  loop: 1
   waypoints:
   - {fileID: 1481586169}
   - {fileID: 1656093391}
@@ -604,7 +607,6 @@ MonoBehaviour:
   horizontalSpacing: 0
   verticalSpacing: 0
   collision: {fileID: 0}
-  move: {x: 0, y: 0, z: 0}
   passengerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1411,7 +1413,6 @@ MonoBehaviour:
   horizontalSpacing: 0
   verticalSpacing: 0
   collision: {fileID: 0}
-  move: {x: 0, y: 0, z: 0}
   passengerMask:
     serializedVersion: 2
     m_Bits: 256
