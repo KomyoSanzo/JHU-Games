@@ -82,8 +82,17 @@ public class waypointMovingPlatform : RayCastController
         {
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
-            float easedFracJourney = Mathf.Pow(fracJourney, easingValue)
-                / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
+            float easedFracJourney;
+            if (fracJourney == 0)
+            {
+                easedFracJourney = 0;
+            }else
+            {
+                easedFracJourney = Mathf.Pow(fracJourney, easingValue)
+               / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
+            }
+           
+            
             //Get the next position the platform should be in between two points
             Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, easedFracJourney);
             //Calculate velocity (after pos - before pos)
