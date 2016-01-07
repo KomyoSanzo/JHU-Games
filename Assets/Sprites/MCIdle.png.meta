@@ -1,0 +1,2002 @@
+fileFormatVersion: 2
+guid: e87684f2cf9a1364d90732ecdc5e5181
+timeCreated: 1452131426
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MCIdle_0
+    21300002: MCIdle_1
+    21300004: MCIdle_2
+    21300006: MCIdle_3
+    21300008: MCIdle_4
+    21300010: MCIdle_5
+    21300012: MCIdle_6
+    21300014: MCIdle_7
+    21300016: MCIdle_8
+    21300018: MCIdle_9
+    21300020: MCIdle_10
+    21300022: MCIdle_11
+    21300024: MCIdle_12
+    21300026: MCIdle_13
+    21300028: MCIdle_14
+    21300030: MCIdle_15
+    21300032: MCIdle_16
+    21300034: MCIdle_17
+    21300036: MCIdle_18
+    21300038: MCIdle_19
+    21300040: MCIdle_20
+    21300042: MCIdle_21
+    21300044: MCIdle_22
+    21300046: MCIdle_23
+    21300048: MCIdle_24
+    21300050: MCIdle_25
+    21300052: MCIdle_26
+    21300054: MCIdle_27
+    21300056: MCIdle_28
+    21300058: MCIdle_29
+    21300060: MCIdle_30
+    21300062: MCIdle_31
+    21300064: MCIdle_32
+    21300066: MCIdle_33
+    21300068: MCIdle_34
+    21300070: MCIdle_35
+    21300072: MCIdle_36
+    21300074: MCIdle_37
+    21300076: MCIdle_38
+    21300078: MCIdle_39
+    21300080: MCIdle_40
+    21300082: MCIdle_41
+    21300084: MCIdle_42
+    21300086: MCIdle_43
+    21300088: MCIdle_44
+    21300090: MCIdle_45
+    21300092: MCIdle_46
+    21300094: MCIdle_47
+    21300096: MCIdle_48
+    21300098: MCIdle_49
+    21300100: MCIdle_50
+    21300102: MCIdle_51
+    21300104: MCIdle_52
+    21300106: MCIdle_53
+    21300108: MCIdle_54
+    21300110: MCIdle_55
+    21300112: MCIdle_56
+    21300114: MCIdle_57
+    21300116: MCIdle_58
+    21300118: MCIdle_59
+    21300120: MCIdle_60
+    21300122: MCIdle_61
+    21300124: MCIdle_62
+    21300126: MCIdle_63
+    21300128: MCIdle_64
+    21300130: MCIdle_65
+    21300132: MCIdle_66
+    21300134: MCIdle_67
+    21300136: MCIdle_68
+    21300138: MCIdle_69
+    21300140: MCIdle_70
+    21300142: MCIdle_71
+    21300144: MCIdle_72
+    21300146: MCIdle_73
+    21300148: MCIdle_74
+    21300150: MCIdle_75
+    21300152: MCIdle_76
+    21300154: MCIdle_77
+    21300156: MCIdle_78
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MCIdle_0
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 7578
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 71}
+        - {x: 14, y: 72}
+        - {x: -38, y: 72}
+        - {x: -50, y: 55}
+        - {x: -50, y: -33}
+        - {x: -38, y: -38}
+        - {x: -42, y: -71}
+        - {x: 46, y: -71}
+        - {x: 51, y: -70}
+        - {x: 51, y: 16}
+    - name: MCIdle_1
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 7578
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 72}
+        - {x: -50, y: -68}
+        - {x: -48, y: -71}
+        - {x: 51, y: -71}
+        - {x: 51, y: 19}
+        - {x: 36, y: 72}
+    - name: MCIdle_2
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 7578
+        width: 396
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.5, y: 72}
+        - {x: -49.5, y: 62}
+        - {x: -49.5, y: -71}
+        - {x: 50.5, y: -71}
+        - {x: 50.5, y: 13}
+        - {x: 31.5, y: 72}
+    - name: MCIdle_3
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 7578
+        width: 396
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 72}
+        - {x: -49.5, y: -59}
+        - {x: -44.5, y: -71}
+        - {x: 50.5, y: -71}
+        - {x: 50.5, y: 40}
+        - {x: 10.5, y: 72}
+    - name: MCIdle_4
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 7578
+        width: 396
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.5, y: -71}
+        - {x: 50.5, y: -67}
+        - {x: 50.5, y: -16}
+        - {x: 47.5, y: 12}
+        - {x: 21.5, y: 66}
+        - {x: 0.5, y: 72}
+        - {x: -45.5, y: 72}
+        - {x: -49.5, y: 69}
+        - {x: -49.5, y: 60}
+        - {x: -43.5, y: 29}
+        - {x: -49.5, y: -13}
+        - {x: -49.5, y: -36}
+        - {x: -45.5, y: -71}
+        - {x: -1.5, y: -71}
+        - {x: -0.5, y: -70}
+        - {x: -0.5, y: -62}
+        - {x: 10.5, y: -71}
+    - name: MCIdle_5
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 7578
+        width: 396
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 72}
+        - {x: -49.5, y: -52}
+        - {x: -41.5, y: -69}
+        - {x: -40.5, y: -71}
+        - {x: 50.5, y: -71}
+        - {x: 50.5, y: 40}
+        - {x: 12.5, y: 72}
+    - name: MCIdle_6
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 7582
+        width: 392
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -65.5}
+        - {x: 50, y: 19.5}
+        - {x: 21, y: 63.5}
+        - {x: 8, y: 71.5}
+        - {x: -49, y: 71.5}
+        - {x: -49, y: -59.5}
+        - {x: -40, y: -70.5}
+        - {x: -1, y: -70.5}
+        - {x: 1, y: -61.5}
+        - {x: 11, y: -70.5}
+        - {x: 46, y: -70.5}
+    - name: MCIdle_7
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 7582
+        width: 392
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -64.5}
+        - {x: 50, y: 34.5}
+        - {x: 6, y: 71.5}
+        - {x: -49, y: 71.5}
+        - {x: -49, y: -70.5}
+        - {x: -1, y: -70.5}
+        - {x: 1, y: -61.5}
+        - {x: 11, y: -70.5}
+        - {x: 43, y: -70.5}
+    - name: MCIdle_8
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 7578
+        width: 398
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: 45}
+        - {x: 17, y: 72}
+        - {x: -50, y: 72}
+        - {x: -50, y: -71}
+        - {x: -1, y: -71}
+        - {x: 1, y: -61}
+        - {x: 8, y: -71}
+        - {x: 50, y: -71}
+    - name: MCIdle_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 6962
+        width: 408
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -71.5}
+        - {x: 52, y: 16.5}
+        - {x: 20, y: 64.5}
+        - {x: 9, y: 72.5}
+        - {x: -42, y: 72.5}
+        - {x: -51, y: 54.5}
+        - {x: -51, y: -55.5}
+        - {x: -42, y: -71.5}
+        - {x: 2, y: -71.5}
+        - {x: 0, y: -58.5}
+        - {x: 13, y: -71.5}
+    - name: MCIdle_10
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 6966
+        width: 404
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 72}
+        - {x: -50.5, y: 54}
+        - {x: -50.5, y: -71}
+        - {x: 44.5, y: -71}
+        - {x: 51.5, y: -65}
+        - {x: 51.5, y: 30}
+        - {x: 31.5, y: 72}
+    - name: MCIdle_11
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 6966
+        width: 400
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 72}
+        - {x: -36, y: 72}
+        - {x: -43, y: 67}
+        - {x: -50, y: 22}
+        - {x: -50, y: -51}
+        - {x: -40, y: -68}
+        - {x: -39, y: -71}
+        - {x: 51, y: -71}
+        - {x: 51, y: 25}
+        - {x: 24, y: 64}
+    - name: MCIdle_12
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 6966
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: 51}
+        - {x: 22, y: 72}
+        - {x: -50, y: 72}
+        - {x: -50, y: -71}
+        - {x: 50, y: -71}
+        - {x: 51, y: -70}
+    - name: MCIdle_13
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 6966
+        width: 400
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 71.5}
+        - {x: -50, y: -63.5}
+        - {x: -45, y: -70.5}
+        - {x: 51, y: -70.5}
+        - {x: 51, y: 30.5}
+        - {x: 14, y: 71.5}
+    - name: MCIdle_14
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 6966
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: -71}
+        - {x: 51, y: -65}
+        - {x: 51, y: 22}
+        - {x: 29, y: 72}
+        - {x: -50, y: 72}
+        - {x: -50, y: -71}
+        - {x: 0, y: -71}
+        - {x: 2, y: -61}
+        - {x: 7, y: -71}
+    - name: MCIdle_15
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 6966
+        width: 410
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 72}
+        - {x: -51, y: 45}
+        - {x: -51, y: -35}
+        - {x: -39, y: -39}
+        - {x: -44, y: -71}
+        - {x: 51, y: -71}
+        - {x: 51, y: 43}
+        - {x: 13, y: 72}
+    - name: MCIdle_16
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 6966
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: 72}
+        - {x: -50, y: -53}
+        - {x: -42, y: -71}
+        - {x: 51, y: -71}
+        - {x: 51, y: 34}
+        - {x: 15, y: 72}
+    - name: MCIdle_17
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 6966
+        width: 396
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.5, y: 72}
+        - {x: -49.5, y: 72}
+        - {x: -49.5, y: -71}
+        - {x: 50.5, y: -71}
+        - {x: 50.5, y: 10}
+        - {x: 20.5, y: 67}
+    - name: MCIdle_18
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 6346
+        width: 419
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: 72.5}
+        - {x: -52.5, y: 72.5}
+        - {x: -52.5, y: -71.5}
+        - {x: 53.5, y: -71.5}
+        - {x: 53.5, y: 34.5}
+        - {x: 52.5, y: 41.5}
+    - name: MCIdle_19
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 6350
+        width: 416
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: -71}
+        - {x: 53, y: -71}
+        - {x: 53, y: 72}
+        - {x: -48, y: 72}
+        - {x: -52, y: 66}
+    - name: MCIdle_20
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 6350
+        width: 412
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 72}
+        - {x: -43.5, y: 65}
+        - {x: -42.5, y: 43}
+        - {x: -51.5, y: 2}
+        - {x: -51.5, y: -48}
+        - {x: -41.5, y: -70}
+        - {x: -39.5, y: -71}
+        - {x: 52.5, y: -71}
+        - {x: 52.5, y: 46}
+        - {x: 19.5, y: 72}
+    - name: MCIdle_21
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 6350
+        width: 416
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -71}
+        - {x: 53, y: -69}
+        - {x: 53, y: 16}
+        - {x: 28, y: 70}
+        - {x: 19, y: 72}
+        - {x: -37, y: 72}
+        - {x: -43, y: 63}
+        - {x: -45, y: 51}
+        - {x: -52, y: 18}
+        - {x: -52, y: -49}
+        - {x: -40, y: -70}
+        - {x: -38, y: -71}
+        - {x: 1, y: -71}
+        - {x: -5, y: -38}
+        - {x: 9, y: -71}
+    - name: MCIdle_22
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 6350
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -65}
+        - {x: 52, y: 26}
+        - {x: 19, y: 70}
+        - {x: 5, y: 72}
+        - {x: -51, y: 72}
+        - {x: -51, y: -71}
+        - {x: 1, y: -71}
+        - {x: -5, y: -38}
+        - {x: 9, y: -71}
+        - {x: 47, y: -71}
+    - name: MCIdle_23
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 6350
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -66}
+        - {x: 52, y: 18}
+        - {x: 26, y: 72}
+        - {x: -51, y: 72}
+        - {x: -51, y: -63}
+        - {x: -46, y: -71}
+        - {x: 0, y: -71}
+        - {x: 2, y: -61}
+        - {x: 11, y: -71}
+        - {x: 45, y: -71}
+    - name: MCIdle_24
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 6350
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -47}
+        - {x: 52, y: 20}
+        - {x: 22, y: 62}
+        - {x: 1, y: 72}
+        - {x: -38, y: 72}
+        - {x: -48, y: 46}
+        - {x: -38, y: 34}
+        - {x: -51, y: -18}
+        - {x: -51, y: -33}
+        - {x: -43, y: -37}
+        - {x: -48, y: -71}
+        - {x: 51, y: -71}
+        - {x: 52, y: -68}
+        - {x: 52, y: -59}
+        - {x: 51, y: -56}
+    - name: MCIdle_25
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 6350
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 72}
+        - {x: -50, y: 72}
+        - {x: -51, y: 71}
+        - {x: -51, y: -57}
+        - {x: -39, y: -71}
+        - {x: 51, y: -71}
+        - {x: 52, y: -69}
+        - {x: 52, y: 28}
+        - {x: 26, y: 69}
+    - name: MCIdle_26
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 5730
+        width: 428
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: -62.5}
+        - {x: 50.5, y: -58.5}
+        - {x: 54.5, y: -40.5}
+        - {x: 54.5, y: 5.5}
+        - {x: 31.5, y: 70.5}
+        - {x: 22.5, y: 72.5}
+        - {x: -45.5, y: 72.5}
+        - {x: -47.5, y: 51.5}
+        - {x: -53.5, y: 39.5}
+        - {x: -53.5, y: -71.5}
+        - {x: 0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 5.5, y: -71.5}
+        - {x: 40.5, y: -71.5}
+    - name: MCIdle_27
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 5730
+        width: 424
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 72.5}
+        - {x: -37, y: 72.5}
+        - {x: -49, y: 48.5}
+        - {x: -53, y: -0.5}
+        - {x: -53, y: -28.5}
+        - {x: -38, y: -35.5}
+        - {x: -29, y: -34.5}
+        - {x: -26, y: -31.5}
+        - {x: -26, y: -30.5}
+        - {x: -27, y: -29.5}
+        - {x: -16, y: -14.5}
+        - {x: -26, y: -29.5}
+        - {x: -26, y: -37.5}
+        - {x: -28, y: -37.5}
+        - {x: -44, y: -71.5}
+        - {x: 54, y: -71.5}
+        - {x: 54, y: 7.5}
+        - {x: 27, y: 69.5}
+    - name: MCIdle_28
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 5730
+        width: 424
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: -71.5}
+        - {x: 54, y: -71.5}
+        - {x: 54, y: 36.5}
+        - {x: 12, y: 72.5}
+        - {x: -50, y: 72.5}
+        - {x: -53, y: 63.5}
+        - {x: -53, y: -28.5}
+        - {x: -38, y: -35.5}
+        - {x: -28, y: -34.5}
+        - {x: -26, y: -32.5}
+        - {x: -26, y: -29.5}
+        - {x: -18, y: -16.5}
+        - {x: -26, y: -29.5}
+        - {x: -26, y: -38.5}
+        - {x: -27, y: -40.5}
+        - {x: -39, y: -66.5}
+        - {x: -41, y: -71.5}
+        - {x: -2, y: -71.5}
+        - {x: 0, y: -69.5}
+        - {x: -1, y: -61.5}
+        - {x: -3, y: -56.5}
+    - name: MCIdle_29
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 5730
+        width: 424
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -71.5}
+        - {x: 42, y: -71.5}
+        - {x: 52, y: -63.5}
+        - {x: 52, y: -59.5}
+        - {x: 54, y: -54.5}
+        - {x: 54, y: 9.5}
+        - {x: 26, y: 68.5}
+        - {x: 15, y: 72.5}
+        - {x: -51, y: 72.5}
+        - {x: -53, y: 58.5}
+        - {x: -53, y: -33.5}
+        - {x: -26, y: -37.5}
+        - {x: -26, y: -29.5}
+        - {x: -18, y: -16.5}
+        - {x: -26, y: -29.5}
+        - {x: -26, y: -38.5}
+        - {x: -27, y: -40.5}
+        - {x: -39, y: -66.5}
+        - {x: -41, y: -71.5}
+        - {x: -2, y: -71.5}
+        - {x: 0, y: -69.5}
+        - {x: -1, y: -61.5}
+        - {x: -3, y: -56.5}
+    - name: MCIdle_30
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 5730
+        width: 420
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: -71.5}
+        - {x: 52.5, y: -63.5}
+        - {x: 53.5, y: -62.5}
+        - {x: 53.5, y: 16.5}
+        - {x: 36.5, y: 72.5}
+        - {x: -48.5, y: 72.5}
+        - {x: -52.5, y: 55.5}
+        - {x: -52.5, y: -57.5}
+        - {x: -41.5, y: -70.5}
+        - {x: -38.5, y: -71.5}
+        - {x: -1.5, y: -71.5}
+        - {x: -0.5, y: -70.5}
+        - {x: -0.5, y: -62.5}
+        - {x: 8.5, y: -71.5}
+    - name: MCIdle_31
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 5730
+        width: 420
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: -71.5}
+        - {x: 53.5, y: -66.5}
+        - {x: 53.5, y: 5.5}
+        - {x: 28.5, y: 68.5}
+        - {x: 17.5, y: 72.5}
+        - {x: -52.5, y: 72.5}
+        - {x: -52.5, y: -35.5}
+        - {x: -48.5, y: -36.5}
+        - {x: -26.5, y: -35.5}
+        - {x: -25.5, y: -32.5}
+        - {x: -25.5, y: -29.5}
+        - {x: -18.5, y: -18.5}
+        - {x: -25.5, y: -29.5}
+        - {x: -25.5, y: -36.5}
+        - {x: -27.5, y: -36.5}
+        - {x: -41.5, y: -66.5}
+        - {x: -37.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 11.5, y: -71.5}
+    - name: MCIdle_32
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 5730
+        width: 420
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.5, y: -71.5}
+        - {x: 53.5, y: -68.5}
+        - {x: 53.5, y: 17.5}
+        - {x: 26.5, y: 63.5}
+        - {x: 12.5, y: 72.5}
+        - {x: -45.5, y: 72.5}
+        - {x: -52.5, y: 50.5}
+        - {x: -52.5, y: -62.5}
+        - {x: -42.5, y: -71.5}
+        - {x: 3.5, y: -71.5}
+        - {x: -4.5, y: -37.5}
+        - {x: 8.5, y: -70.5}
+        - {x: 10.5, y: -71.5}
+    - name: MCIdle_33
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 5730
+        width: 416
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 72.5}
+        - {x: -52, y: 72.5}
+        - {x: -52, y: -71.5}
+        - {x: 40, y: -71.5}
+        - {x: 53, y: -67.5}
+        - {x: 53, y: 33.5}
+        - {x: 21, y: 62.5}
+    - name: MCIdle_34
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 5110
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.5, y: 73}
+        - {x: -54.5, y: 73}
+        - {x: -54.5, y: -34}
+        - {x: -43.5, y: -39}
+        - {x: -30.5, y: -34}
+        - {x: -27.5, y: -33}
+        - {x: -27.5, y: -23}
+        - {x: -17.5, y: -17}
+        - {x: -27.5, y: -29}
+        - {x: -32.5, y: -61}
+        - {x: -40.5, y: -67}
+        - {x: -43.5, y: -70}
+        - {x: -41.5, y: -72}
+        - {x: 43.5, y: -72}
+        - {x: 51.5, y: -64}
+        - {x: 55.5, y: -55}
+        - {x: 55.5, y: 62}
+    - name: MCIdle_35
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 5110
+        width: 432
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 73}
+        - {x: -54, y: 8}
+        - {x: -54, y: -30}
+        - {x: -48, y: -34}
+        - {x: -29, y: -36}
+        - {x: -28, y: -32}
+        - {x: -28, y: -28}
+        - {x: -21, y: -21}
+        - {x: -28, y: -30}
+        - {x: -28, y: -51}
+        - {x: -40, y: -67}
+        - {x: -40, y: -72}
+        - {x: 55, y: -72}
+        - {x: 55, y: 45}
+        - {x: 17, y: 73}
+    - name: MCIdle_36
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 5110
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 73}
+        - {x: -54.5, y: 26}
+        - {x: -54.5, y: -47}
+        - {x: -28.5, y: -37}
+        - {x: -26.5, y: -33}
+        - {x: -28.5, y: -22}
+        - {x: -23.5, y: -21}
+        - {x: -18.5, y: -17}
+        - {x: -26.5, y: -30}
+        - {x: -27.5, y: -49}
+        - {x: -39.5, y: -67}
+        - {x: -42.5, y: -72}
+        - {x: 55.5, y: -72}
+        - {x: 55.5, y: 16}
+        - {x: 38.5, y: 73}
+    - name: MCIdle_37
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 5110
+        width: 432
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: -72}
+        - {x: 55, y: -69}
+        - {x: 55, y: 43}
+        - {x: 11, y: 73}
+        - {x: -38, y: 73}
+        - {x: -40, y: 68}
+        - {x: -43, y: 48}
+        - {x: -54, y: 1}
+        - {x: -54, y: -31}
+        - {x: -40, y: -37}
+        - {x: -29, y: -36}
+        - {x: -25, y: -26}
+        - {x: -17, y: -16}
+        - {x: -27, y: -31}
+        - {x: -38, y: -64}
+        - {x: -42, y: -71}
+        - {x: -38, y: -72}
+        - {x: 0, y: -72}
+        - {x: -4, y: -46}
+        - {x: 8, y: -72}
+    - name: MCIdle_38
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 5110
+        width: 432
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 73}
+        - {x: -54, y: 73}
+        - {x: -54, y: -34}
+        - {x: -28, y: -36}
+        - {x: -26, y: -28}
+        - {x: -15, y: -12}
+        - {x: -26, y: -30}
+        - {x: -34, y: -58}
+        - {x: -44, y: -72}
+        - {x: 44, y: -72}
+        - {x: 53, y: -62}
+        - {x: 55, y: -56}
+        - {x: 55, y: 13}
+    - name: MCIdle_39
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 5110
+        width: 432
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 73}
+        - {x: -51, y: 72}
+        - {x: -54, y: 14}
+        - {x: -54, y: -28}
+        - {x: -46, y: -34}
+        - {x: -28, y: -35}
+        - {x: -27, y: -32}
+        - {x: -27, y: -29}
+        - {x: -23, y: -21}
+        - {x: -18, y: -16}
+        - {x: -25, y: -25}
+        - {x: -29, y: -38}
+        - {x: -41, y: -67}
+        - {x: -43, y: -72}
+        - {x: 55, y: -72}
+        - {x: 55, y: 33}
+        - {x: 7, y: 73}
+    - name: MCIdle_40
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 5110
+        width: 428
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.5, y: -72}
+        - {x: 52.5, y: -64}
+        - {x: 54.5, y: -58}
+        - {x: 54.5, y: 25}
+        - {x: 32.5, y: 73}
+        - {x: -42.5, y: 73}
+        - {x: -47.5, y: 70}
+        - {x: -53.5, y: 30}
+        - {x: -53.5, y: -27}
+        - {x: -40.5, y: -38}
+        - {x: -27.5, y: -34}
+        - {x: -26.5, y: -31}
+        - {x: -27.5, y: -28}
+        - {x: -19.5, y: -19}
+        - {x: -25.5, y: -28}
+        - {x: -34.5, y: -58}
+        - {x: -44.5, y: -72}
+        - {x: -1.5, y: -72}
+        - {x: 1.5, y: -64}
+        - {x: 9.5, y: -71}
+        - {x: 13.5, y: -72}
+    - name: MCIdle_41
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 5110
+        width: 428
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.5, y: 73}
+        - {x: -52.5, y: 71}
+        - {x: -53.5, y: 63}
+        - {x: -53.5, y: -27}
+        - {x: -39.5, y: -34}
+        - {x: -28.5, y: -34}
+        - {x: -26.5, y: -32}
+        - {x: -26.5, y: -30}
+        - {x: -18.5, y: -18}
+        - {x: -25.5, y: -28}
+        - {x: -26.5, y: -31}
+        - {x: -27.5, y: -50}
+        - {x: -38.5, y: -64}
+        - {x: -42.5, y: -72}
+        - {x: 47.5, y: -72}
+        - {x: 54.5, y: -69}
+        - {x: 54.5, y: 24}
+        - {x: 19.5, y: 73}
+    - name: MCIdle_42
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 4490
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55.5, y: -72}
+        - {x: 55.5, y: 28}
+        - {x: 45.5, y: 73}
+        - {x: -54.5, y: 73}
+        - {x: -54.5, y: -34}
+        - {x: -29.5, y: -35}
+        - {x: -27.5, y: -27}
+        - {x: -19.5, y: -18}
+        - {x: -27.5, y: -29}
+        - {x: -29.5, y: -52}
+        - {x: -41.5, y: -67}
+        - {x: -39.5, y: -72}
+        - {x: 1.5, y: -72}
+        - {x: -5.5, y: -37}
+        - {x: 8.5, y: -71}
+        - {x: 9.5, y: -72}
+    - name: MCIdle_43
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 4494
+        width: 432
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -68.5}
+        - {x: 55, y: -64.5}
+        - {x: 26, y: -26.5}
+        - {x: 29, y: -16.5}
+        - {x: 31, y: -14.5}
+        - {x: 30, y: -16.5}
+        - {x: 30, y: -18.5}
+        - {x: 31, y: -21.5}
+        - {x: 55, y: -19.5}
+        - {x: 55, y: 28.5}
+        - {x: 36, y: 72.5}
+        - {x: -46, y: 72.5}
+        - {x: -54, y: 52.5}
+        - {x: -54, y: -35.5}
+        - {x: -49, y: -38.5}
+        - {x: -31, y: -34.5}
+        - {x: -27, y: -32.5}
+        - {x: -29, y: -22.5}
+        - {x: -24, y: -21.5}
+        - {x: -27, y: -28.5}
+        - {x: -31, y: -59.5}
+        - {x: -42, y: -67.5}
+        - {x: -39, y: -71.5}
+        - {x: -1, y: -71.5}
+        - {x: 1, y: -62.5}
+        - {x: 7, y: -71.5}
+        - {x: 44, y: -71.5}
+    - name: MCIdle_44
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 4490
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: -72}
+        - {x: 55.5, y: -72}
+        - {x: 55.5, y: 34}
+        - {x: 18.5, y: 70}
+        - {x: 9.5, y: 73}
+        - {x: -36.5, y: 73}
+        - {x: -45.5, y: 70}
+        - {x: -54.5, y: 16}
+        - {x: -54.5, y: -30}
+        - {x: -33.5, y: -37}
+        - {x: -27.5, y: -32}
+        - {x: -30.5, y: -21}
+        - {x: -24.5, y: -21}
+        - {x: -18.5, y: -16}
+        - {x: -26.5, y: -30}
+        - {x: -27.5, y: -34}
+        - {x: -27.5, y: -44}
+        - {x: -42.5, y: -71}
+        - {x: -39.5, y: -72}
+        - {x: -2.5, y: -72}
+        - {x: -1.5, y: -71}
+        - {x: -1.5, y: -62}
+        - {x: -7.5, y: -38}
+    - name: MCIdle_45
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 4490
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: -13}
+        - {x: 31.5, y: -11}
+        - {x: 31.5, y: -22}
+        - {x: 55.5, y: -24}
+        - {x: 55.5, y: 41}
+        - {x: 16.5, y: 73}
+        - {x: -39.5, y: 73}
+        - {x: -44.5, y: 69}
+        - {x: -45.5, y: 44}
+        - {x: -54.5, y: 17}
+        - {x: -54.5, y: -31}
+        - {x: -29.5, y: -36}
+        - {x: -23.5, y: -21}
+        - {x: -19.5, y: -18}
+        - {x: -26.5, y: -30}
+        - {x: -28.5, y: -39}
+        - {x: -41.5, y: -71}
+        - {x: -40.5, y: -72}
+        - {x: 43.5, y: -72}
+        - {x: 51.5, y: -64}
+        - {x: 49.5, y: -57}
+        - {x: 26.5, y: -28}
+    - name: MCIdle_46
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 4490
+        width: 440
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: -72.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: 12.5}
+        - {x: 22, y: 73.5}
+        - {x: -35, y: 73.5}
+        - {x: -44, y: 68.5}
+        - {x: -55, y: 11.5}
+        - {x: -55, y: -30.5}
+        - {x: -43, y: -33.5}
+        - {x: -30, y: -34.5}
+        - {x: -19, y: -17.5}
+        - {x: -27, y: -31.5}
+        - {x: -42, y: -71.5}
+        - {x: -40, y: -72.5}
+        - {x: -1, y: -72.5}
+        - {x: 1, y: -63.5}
+        - {x: 13, y: -72.5}
+    - name: MCIdle_47
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 4490
+        width: 440
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 66}
+        - {x: 7, y: 73}
+        - {x: -35, y: 73}
+        - {x: -40, y: 64}
+        - {x: -42, y: 48}
+        - {x: -40, y: 46}
+        - {x: -55, y: -3}
+        - {x: -55, y: -29}
+        - {x: -49, y: -32}
+        - {x: -29, y: -35}
+        - {x: -27, y: -27}
+        - {x: -19, y: -17}
+        - {x: -27, y: -30}
+        - {x: -42, y: -71}
+        - {x: -40, y: -72}
+        - {x: 37, y: -72}
+        - {x: 56, y: -66}
+        - {x: 56, y: 4}
+        - {x: 42, y: 37}
+    - name: MCIdle_48
+      rect:
+        serializedVersion: 2
+        x: 3130
+        y: 4490
+        width: 440
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -72}
+        - {x: 52, y: -64}
+        - {x: 50, y: -56}
+        - {x: 56, y: -35}
+        - {x: 56, y: 18}
+        - {x: 30, y: 70}
+        - {x: 13, y: 73}
+        - {x: -33, y: 73}
+        - {x: -40, y: 67}
+        - {x: -42, y: 48}
+        - {x: -55, y: 3}
+        - {x: -55, y: -27}
+        - {x: -49, y: -38}
+        - {x: -30, y: -35}
+        - {x: -27, y: -32}
+        - {x: -29, y: -21}
+        - {x: -23, y: -23}
+        - {x: -27, y: -29}
+        - {x: -33, y: -58}
+        - {x: -43, y: -71}
+        - {x: -40, y: -72}
+        - {x: -1, y: -72}
+        - {x: 1, y: -62}
+        - {x: 9, y: -72}
+    - name: MCIdle_49
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 4490
+        width: 436
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: 73}
+        - {x: -41.5, y: 73}
+        - {x: -48.5, y: 71}
+        - {x: -54.5, y: 13}
+        - {x: -54.5, y: -26}
+        - {x: -46.5, y: -32}
+        - {x: -29.5, y: -35}
+        - {x: -27.5, y: -27}
+        - {x: -21.5, y: -23}
+        - {x: -27.5, y: -29}
+        - {x: -29.5, y: -52}
+        - {x: -49.5, y: -72}
+        - {x: 55.5, y: -72}
+        - {x: 55.5, y: 32}
+        - {x: 20.5, y: 61}
+    - name: MCIdle_50
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 3871
+        width: 424
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -62.75}
+        - {x: 54, y: -50.75}
+        - {x: 54, y: 12.25}
+        - {x: 47, y: 44.25}
+        - {x: 5, y: 73.25}
+        - {x: -42, y: 73.25}
+        - {x: -47, y: 41.25}
+        - {x: -53, y: -0.75}
+        - {x: -53, y: -29.75}
+        - {x: -39, y: -34.75}
+        - {x: -28, y: -33.75}
+        - {x: -26, y: -31.75}
+        - {x: -26, y: -28.75}
+        - {x: -17, y: -16.75}
+        - {x: -26, y: -29.75}
+        - {x: -26, y: -46.75}
+        - {x: -27, y: -47.75}
+        - {x: -40, y: -65.75}
+        - {x: -38, y: -71.75}
+        - {x: -2, y: -71.75}
+        - {x: 2, y: -69.75}
+        - {x: 7, y: -71.75}
+        - {x: 41, y: -71.75}
+    - name: MCIdle_51
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 3874
+        width: 424
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -71.5}
+        - {x: 54, y: -65.5}
+        - {x: 54, y: 35.5}
+        - {x: 16, y: 72.5}
+        - {x: -45, y: 72.5}
+        - {x: -53, y: 39.5}
+        - {x: -53, y: -36.5}
+        - {x: -27, y: -35.5}
+        - {x: -25, y: -27.5}
+        - {x: -19, y: -19.5}
+        - {x: -25, y: -29.5}
+        - {x: -26, y: -33.5}
+        - {x: -41, y: -70.5}
+        - {x: -37, y: -71.5}
+        - {x: 1, y: -71.5}
+        - {x: 2, y: -62.5}
+        - {x: 9, y: -71.5}
+    - name: MCIdle_52
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 3874
+        width: 428
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.5, y: -66.5}
+        - {x: 54.5, y: 34.5}
+        - {x: 45.5, y: 72.5}
+        - {x: -53.5, y: 72.5}
+        - {x: -53.5, y: -34.5}
+        - {x: -28.5, y: -34.5}
+        - {x: -26.5, y: -32.5}
+        - {x: -26.5, y: -29.5}
+        - {x: -19.5, y: -19.5}
+        - {x: -25.5, y: -28.5}
+        - {x: -26.5, y: -31.5}
+        - {x: -26.5, y: -50.5}
+        - {x: -27.5, y: -50.5}
+        - {x: -38.5, y: -64.5}
+        - {x: -41.5, y: -70.5}
+        - {x: -37.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 8.5, y: -71.5}
+        - {x: 46.5, y: -71.5}
+    - name: MCIdle_53
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 3874
+        width: 428
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.5, y: 72.5}
+        - {x: -53.5, y: 72.5}
+        - {x: -53.5, y: -30.5}
+        - {x: -40.5, y: -43.5}
+        - {x: -28.5, y: -34.5}
+        - {x: -26.5, y: -32.5}
+        - {x: -24.5, y: -22.5}
+        - {x: -18.5, y: -18.5}
+        - {x: -25.5, y: -29.5}
+        - {x: -27.5, y: -38.5}
+        - {x: -39.5, y: -68.5}
+        - {x: -38.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -61.5}
+        - {x: 13.5, y: -71.5}
+        - {x: 54.5, y: -71.5}
+    - name: MCIdle_54
+      rect:
+        serializedVersion: 2
+        x: 2194
+        y: 3874
+        width: 428
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: -69.5}
+        - {x: 54.5, y: -66.5}
+        - {x: 54.5, y: 35.5}
+        - {x: 44.5, y: 72.5}
+        - {x: -45.5, y: 72.5}
+        - {x: -53.5, y: 40.5}
+        - {x: -53.5, y: -35.5}
+        - {x: -38.5, y: -35.5}
+        - {x: -28.5, y: -34.5}
+        - {x: -26.5, y: -32.5}
+        - {x: -41.5, y: -70.5}
+        - {x: -37.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 8.5, y: -71.5}
+        - {x: 44.5, y: -71.5}
+    - name: MCIdle_55
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 3874
+        width: 428
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: -69.5}
+        - {x: 54.5, y: -64.5}
+        - {x: 54.5, y: 38.5}
+        - {x: 11.5, y: 72.5}
+        - {x: -53.5, y: 72.5}
+        - {x: -53.5, y: -36.5}
+        - {x: -43.5, y: -39.5}
+        - {x: -28.5, y: -34.5}
+        - {x: -26.5, y: -32.5}
+        - {x: -26.5, y: -30.5}
+        - {x: -15.5, y: -17.5}
+        - {x: -25.5, y: -28.5}
+        - {x: -26.5, y: -31.5}
+        - {x: -26.5, y: -50.5}
+        - {x: -27.5, y: -51.5}
+        - {x: -28.5, y: -55.5}
+        - {x: -40.5, y: -66.5}
+        - {x: -40.5, y: -70.5}
+        - {x: -38.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 8.5, y: -71.5}
+        - {x: 44.5, y: -71.5}
+    - name: MCIdle_56
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 3870
+        width: 428
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.5, y: -59}
+        - {x: 54.5, y: 21}
+        - {x: 14.5, y: 73}
+        - {x: -46.5, y: 73}
+        - {x: -50.5, y: 71}
+        - {x: -53.5, y: 38}
+        - {x: -53.5, y: -36}
+        - {x: -28.5, y: -35}
+        - {x: -26.5, y: -27}
+        - {x: -27.5, y: -31}
+        - {x: -33.5, y: -58}
+        - {x: -43.5, y: -72}
+        - {x: -1.5, y: -72}
+        - {x: 1.5, y: -64}
+        - {x: 9.5, y: -72}
+        - {x: 45.5, y: -72}
+    - name: MCIdle_57
+      rect:
+        serializedVersion: 2
+        x: 3618
+        y: 3870
+        width: 432
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -57}
+        - {x: 55, y: 23}
+        - {x: 24, y: 73}
+        - {x: -54, y: 73}
+        - {x: -54, y: -27}
+        - {x: -42, y: -33}
+        - {x: -30, y: -34}
+        - {x: -28, y: -32}
+        - {x: -28, y: -29}
+        - {x: -19, y: -17}
+        - {x: -28, y: -31}
+        - {x: -29, y: -57}
+        - {x: -41, y: -67}
+        - {x: -39, y: -72}
+        - {x: -2, y: -72}
+        - {x: 1, y: -64}
+        - {x: 9, y: -72}
+        - {x: 50, y: -72}
+    - name: MCIdle_58
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 3258
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 72}
+        - {x: -51, y: -71}
+        - {x: 52, y: -71}
+        - {x: 52, y: 46}
+        - {x: 43, y: 72}
+    - name: MCIdle_59
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 3258
+        width: 412
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51.5, y: 72}
+        - {x: -51.5, y: -71}
+        - {x: 52.5, y: -71}
+        - {x: 52.5, y: 44}
+        - {x: 46.5, y: 72}
+    - name: MCIdle_60
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 3258
+        width: 412
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 72}
+        - {x: -51.5, y: 68}
+        - {x: -51.5, y: -66}
+        - {x: -46.5, y: -71}
+        - {x: 52.5, y: -71}
+        - {x: 52.5, y: 37}
+        - {x: 6.5, y: 72}
+    - name: MCIdle_61
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 3254
+        width: 412
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: 72.5}
+        - {x: -51.5, y: 72.5}
+        - {x: -51.5, y: -59.5}
+        - {x: -39.5, y: -70.5}
+        - {x: -37.5, y: -71.5}
+        - {x: 50.5, y: -71.5}
+        - {x: 52.5, y: -67.5}
+        - {x: 52.5, y: 57.5}
+    - name: MCIdle_62
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 3254
+        width: 416
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: 37.5}
+        - {x: 15, y: 72.5}
+        - {x: -52, y: 72.5}
+        - {x: -52, y: -71.5}
+        - {x: 0, y: -71.5}
+        - {x: 3, y: -62.5}
+        - {x: 10, y: -71.5}
+        - {x: 53, y: -71.5}
+    - name: MCIdle_63
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 3254
+        width: 416
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 72.5}
+        - {x: -45, y: 53.5}
+        - {x: -52, y: 16.5}
+        - {x: -52, y: -53.5}
+        - {x: -44, y: -71.5}
+        - {x: 53, y: -71.5}
+        - {x: 53, y: 72.5}
+    - name: MCIdle_64
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 3254
+        width: 420
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: -71.5}
+        - {x: 53.5, y: -64.5}
+        - {x: 53.5, y: 60.5}
+        - {x: 50.5, y: 72.5}
+        - {x: -51.5, y: 72.5}
+        - {x: -52.5, y: 67.5}
+        - {x: -52.5, y: -42.5}
+        - {x: -27.5, y: -34.5}
+        - {x: -25.5, y: -32.5}
+        - {x: -25.5, y: -29.5}
+        - {x: -26.5, y: -26.5}
+        - {x: -17.5, y: -15.5}
+        - {x: -25.5, y: -29.5}
+        - {x: -25.5, y: -37.5}
+        - {x: -27.5, y: -37.5}
+        - {x: -39.5, y: -67.5}
+        - {x: -39.5, y: -68.5}
+        - {x: -37.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 11.5, y: -71.5}
+    - name: MCIdle_65
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 3254
+        width: 420
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: -71.5}
+        - {x: 53.5, y: -70.5}
+        - {x: 53.5, y: 34.5}
+        - {x: 24.5, y: 68.5}
+        - {x: 11.5, y: 72.5}
+        - {x: -47.5, y: 72.5}
+        - {x: -52.5, y: 46.5}
+        - {x: -52.5, y: -54.5}
+        - {x: -40.5, y: -70.5}
+        - {x: -37.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -62.5}
+        - {x: 8.5, y: -71.5}
+    - name: MCIdle_66
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2642
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -67}
+        - {x: 51, y: 9}
+        - {x: 15, y: 72}
+        - {x: -35, y: 72}
+        - {x: -40, y: 65}
+        - {x: -47, y: 46}
+        - {x: -50, y: 28}
+        - {x: -50, y: -36}
+        - {x: -36, y: -38}
+        - {x: -41, y: -70}
+        - {x: -37, y: -71}
+        - {x: 2, y: -71}
+        - {x: 0, y: -59}
+        - {x: 13, y: -71}
+        - {x: 42, y: -71}
+    - name: MCIdle_67
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 2642
+        width: 400
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: -71}
+        - {x: 51, y: -71}
+        - {x: 51, y: 48}
+        - {x: 44, y: 72}
+        - {x: -49, y: 72}
+        - {x: -50, y: 71}
+    - name: MCIdle_68
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 2642
+        width: 400
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -71.5}
+        - {x: 51, y: 22.5}
+        - {x: 20, y: 71.5}
+        - {x: 16, y: 72.5}
+        - {x: -50, y: 72.5}
+        - {x: -50, y: -61.5}
+        - {x: -41, y: -70.5}
+        - {x: -37, y: -71.5}
+        - {x: 1, y: -71.5}
+        - {x: 2, y: -63.5}
+        - {x: 8, y: -71.5}
+    - name: MCIdle_69
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 2642
+        width: 404
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: 43}
+        - {x: 29.5, y: 71}
+        - {x: 26.5, y: 72}
+        - {x: -50.5, y: 72}
+        - {x: -50.5, y: -71}
+        - {x: 51.5, y: -71}
+    - name: MCIdle_70
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 2642
+        width: 404
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 72}
+        - {x: -50.5, y: -71}
+        - {x: 51.5, y: -71}
+        - {x: 51.5, y: 41}
+        - {x: 4.5, y: 72}
+    - name: MCIdle_71
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 2642
+        width: 404
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: -71}
+        - {x: 51.5, y: 31}
+        - {x: 14.5, y: 72}
+        - {x: -41.5, y: 72}
+        - {x: -47.5, y: 69}
+        - {x: -50.5, y: 66}
+        - {x: -50.5, y: -71}
+        - {x: -0.5, y: -71}
+        - {x: 1.5, y: -61}
+        - {x: 6.5, y: -71}
+    - name: MCIdle_72
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 2640
+        width: 404
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: -65.5}
+        - {x: 51.5, y: -5.5}
+        - {x: 50.5, y: 13.5}
+        - {x: 23.5, y: 64.5}
+        - {x: 3.5, y: 71.5}
+        - {x: -50.5, y: 71.5}
+        - {x: -50.5, y: -60.5}
+        - {x: -40.5, y: -70.5}
+        - {x: -38.5, y: -71.5}
+        - {x: -0.5, y: -71.5}
+        - {x: 1.5, y: -61.5}
+        - {x: 5.5, y: -71.5}
+        - {x: 40.5, y: -71.5}
+    - name: MCIdle_73
+      rect:
+        serializedVersion: 2
+        x: 3194
+        y: 2642
+        width: 404
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 72}
+        - {x: -33.5, y: 72}
+        - {x: -41.5, y: 64}
+        - {x: -42.5, y: 47}
+        - {x: -50.5, y: 13}
+        - {x: -50.5, y: -55}
+        - {x: -40.5, y: -71}
+        - {x: 51.5, y: -71}
+        - {x: 51.5, y: 25}
+        - {x: 20.5, y: 60}
+    - name: MCIdle_74
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2642
+        width: 408
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -71}
+        - {x: 52, y: -69}
+        - {x: 52, y: 40}
+        - {x: 18, y: 72}
+        - {x: -44, y: 72}
+        - {x: -46, y: 70}
+        - {x: -51, y: 24}
+        - {x: -51, y: -45}
+        - {x: -38, y: -71}
+        - {x: 0, y: -71}
+        - {x: 0, y: -62}
+        - {x: 7, y: -71}
+    - name: MCIdle_75
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 2030
+        width: 396
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49.5, y: 71.5}
+        - {x: -49.5, y: -70.5}
+        - {x: 46.5, y: -70.5}
+        - {x: 50.5, y: -67.5}
+        - {x: 50.5, y: 13.5}
+        - {x: 18.5, y: 71.5}
+    - name: MCIdle_76
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 2030
+        width: 400
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 71.5}
+        - {x: -44, y: 71.5}
+        - {x: -50, y: 63.5}
+        - {x: -50, y: -70.5}
+        - {x: 51, y: -70.5}
+        - {x: 51, y: 39.5}
+        - {x: 16, y: 70.5}
+    - name: MCIdle_77
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 2030
+        width: 396
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.5, y: 71.5}
+        - {x: -49.5, y: 48.5}
+        - {x: -49.5, y: -59.5}
+        - {x: -38.5, y: -70.5}
+        - {x: 50.5, y: -70.5}
+        - {x: 50.5, y: 30.5}
+        - {x: 4.5, y: 71.5}
+    - name: MCIdle_78
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 2030
+        width: 398
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 24.5}
+        - {x: 28.5, y: 71.5}
+        - {x: -49.5, y: 71.5}
+        - {x: -49.5, y: -70.5}
+        - {x: -0.5, y: -70.5}
+        - {x: 1.5, y: -60.5}
+        - {x: 8.5, y: -70.5}
+        - {x: 50.5, y: -70.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

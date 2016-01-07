@@ -18,15 +18,16 @@ public class waypointMovingPlatform : RayCastController
     public float easingValue = 2.0F;
 
     //Waiting info
-    public float waitAtWaypointTime = 1.0F;
-    float waitCurrentCooldown = 0;
+    public float waitTime = 1.0f;
+    private float nextMoveTime;
 
     public bool loop = true;
+    public bool cyclic;
     public GameObject[] waypoints;
 
     private float startTime;
     private float journeyLength;
-
+    private float fracJourney;
     private Transform startMarker, endMarker;
 
     private bool isReversed = false;
@@ -52,9 +53,12 @@ public class waypointMovingPlatform : RayCastController
         {
             if (loop)
             {
-                Array.Reverse(waypoints);
-                currentStartPoint = 0;
-                isReversed = !isReversed;
+                if (!cyclic)
+                {
+                    Array.Reverse(waypoints);
+                    currentStartPoint = 0;
+                    isReversed = !isReversed;
+                }
             } else
             {
                 isStopped = true;
@@ -63,8 +67,8 @@ public class waypointMovingPlatform : RayCastController
         } 
         if(isStopped == false)
         {
-            startMarker = waypoints[currentStartPoint].transform;
-            endMarker = waypoints[currentStartPoint + 1].transform;
+            startMarker = waypoints[currentStartPoint % waypoints.Length].transform;
+            endMarker = waypoints[(currentStartPoint + 1) % waypoints.Length].transform;
             startTime = Time.time;
             journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
         }
@@ -80,34 +84,9 @@ public class waypointMovingPlatform : RayCastController
     {
         if (isStopped == false)
         {
-            float distCovered = (Time.time - startTime) * speed;
-            float fracJourney = distCovered / journeyLength;
-            float easedFracJourney;
-            if (fracJourney == 0)
-            {
-                easedFracJourney = 0;
-            }else
-            {
-                //y = x ^ a / (x ^ a + (1 - x) ^ a)
-                if(fracJourney > 1) //Sometimes distcovered is greater than journey length may be a worse bug
-                {
-                    fracJourney = 1;
-                }
-                easedFracJourney = Mathf.Pow(fracJourney, easingValue)
-               / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
-                //Debug.Log(fracJourney + "  " + Mathf.Pow(fracJourney, easingValue) + " " + easedFracJourney);
-            }
-           
+
+            Vector3 velocity = calculatePlatformMovement();
             
-            //Get the next position the platform should be in between two points
-            Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, easedFracJourney);
-            //Calculate velocity (after pos - before pos)
-            Vector3 velocity = lerpVal - transform.position;
-
-
-            //Debug.Log("transform pos: " + transform.position + " lerpVal: " + lerpVal + " velocity " + velocity);
-            //Debug.Log("Comparing vectors: " + (lerpVal == velocity));
-
             //Willis's Code calls
             UpdateRaycastOrigins();
             CalculateMovement(velocity);
@@ -116,16 +95,41 @@ public class waypointMovingPlatform : RayCastController
             MovePassengers(false);
 
             //Continue the journey to the next waypoint
-            if (fracJourney >= 1f)
-            {
-                currentStartPoint++;
-                SetPoints();
-            }
+            
         }
         
 
     }
 
+    Vector3 calculatePlatformMovement ()
+    {
+        if (Time.time < nextMoveTime)
+        {
+            return Vector3.zero;
+        }
+
+        fracJourney += Time.deltaTime * speed / journeyLength;
+        fracJourney = Mathf.Clamp01(fracJourney);
+
+        float easedFracJourney = Mathf.Pow(fracJourney, easingValue) / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
+
+
+        //Get the next position the platform should be in between two points
+        Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, easedFracJourney);
+
+
+        if (fracJourney >= 1f)
+        {
+            fracJourney = 0;
+            currentStartPoint++;
+            currentStartPoint %= waypoints.Length;
+            SetPoints();
+            nextMoveTime = Time.time + waitTime;
+        }
+
+        return lerpVal - transform.position;
+
+    }
     void MovePassengers(bool beforeMovePlatform)
     {
         foreach (PassengerMovement passenger in pMovements)
