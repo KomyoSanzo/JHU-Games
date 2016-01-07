@@ -88,8 +88,14 @@ public class waypointMovingPlatform : RayCastController
                 easedFracJourney = 0;
             }else
             {
+                //y = x ^ a / (x ^ a + (1 - x) ^ a)
+                if(fracJourney > 1) //Sometimes distcovered is greater than journey length may be a worse bug
+                {
+                    fracJourney = 1;
+                }
                 easedFracJourney = Mathf.Pow(fracJourney, easingValue)
                / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
+                //Debug.Log(fracJourney + "  " + Mathf.Pow(fracJourney, easingValue) + " " + easedFracJourney);
             }
            
             
@@ -97,7 +103,7 @@ public class waypointMovingPlatform : RayCastController
             Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, easedFracJourney);
             //Calculate velocity (after pos - before pos)
             Vector3 velocity = lerpVal - transform.position;
-            //y = x ^ a / (x ^ a + (1 - x) ^ a)
+
 
             //Debug.Log("transform pos: " + transform.position + " lerpVal: " + lerpVal + " velocity " + velocity);
             //Debug.Log("Comparing vectors: " + (lerpVal == velocity));
