@@ -68,8 +68,6 @@ public class movingPlatformController : RayCastController {
                         movedPassengers.Add(hit.transform);
                         float pushX = (directionY == 1) ? velocity.x : 0;
                         float pushY = velocity.y - (hit.distance - skinWidth) * directionY;
-                        hit.transform.Translate(new Vector3(pushX, pushY));
-
 
                         pMovements.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), directionY == 1, true));
                     }
