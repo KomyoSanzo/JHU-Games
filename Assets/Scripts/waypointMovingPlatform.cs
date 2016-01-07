@@ -15,7 +15,12 @@ public class waypointMovingPlatform : RayCastController
     Dictionary<Transform, Controller2D> pDict = new Dictionary<Transform, Controller2D>();
 
     public float speed = 1.0F;
+    public float easingValue = 2.0F;
+
+    //Waiting info
     public float waitAtWaypointTime = 1.0F;
+    float waitCurrentCooldown = 0;
+
     public bool loop = true;
     public GameObject[] waypoints;
 
@@ -77,11 +82,13 @@ public class waypointMovingPlatform : RayCastController
         {
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
-
+            float easedFracJourney = Mathf.Pow(fracJourney, easingValue)
+                / (Mathf.Pow(fracJourney, easingValue) + Mathf.Pow((1 - fracJourney), easingValue));
             //Get the next position the platform should be in between two points
-            Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+            Vector3 lerpVal = Vector3.Lerp(startMarker.position, endMarker.position, easedFracJourney);
             //Calculate velocity (after pos - before pos)
             Vector3 velocity = lerpVal - transform.position;
+            //y = x ^ a / (x ^ a + (1 - x) ^ a)
 
             //Debug.Log("transform pos: " + transform.position + " lerpVal: " + lerpVal + " velocity " + velocity);
             //Debug.Log("Comparing vectors: " + (lerpVal == velocity));
@@ -144,8 +151,6 @@ public class waypointMovingPlatform : RayCastController
                         movedPassengers.Add(hit.transform);
                         float pushX = (directionY == 1) ? velocity.x : 0;
                         float pushY = velocity.y - (hit.distance - skinWidth) * directionY;
-                        hit.transform.Translate(new Vector3(pushX, pushY));
-
 
                         pMovements.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), directionY == 1, true));
                     }
