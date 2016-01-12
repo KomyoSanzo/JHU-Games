@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WeaponsScript : MonoBehaviour {
+public class WeaponsController : MonoBehaviour {
+    public GameObject[] testSkills;
 
     public float shootCooldown = .4f;
     public float projectileSpeed = 1f;
@@ -50,7 +51,10 @@ public class WeaponsScript : MonoBehaviour {
     }
     void shootProject()
     {
-        var shotTransform = Instantiate(shotPrefab) as Transform;
+        GameObject testPrefab = testSkills[0];
+
+        var shotTransform = Instantiate(testPrefab.transform) as Transform;
+
         shotTransform.position = transform.position;
         if (playerInformation.facingRight)
         {

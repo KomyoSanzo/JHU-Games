@@ -8,7 +8,8 @@ public class PlayerScript : MonoBehaviour
 {
     Vector3 velocity;
     float velocityXSmoothing;
-    float test;
+    
+
     //PHYSICS AND GRAVITY INFORMATION
     public float jumpHeight = 4;
     public float jumpTime = .4f;
@@ -23,7 +24,7 @@ public class PlayerScript : MonoBehaviour
     public float dashCooldown = 1;
     float dashCurrentCooldown = 0;
 
-    float dashButtonCooldown = 0.4f;
+    float dashButtonCooldown = 0.6f;
     int dashRightButtonCount = 0;
     int dashLeftButtonCount = 0;
     bool canDash;
@@ -44,9 +45,14 @@ public class PlayerScript : MonoBehaviour
     Controller2D controller;
     Animator anim;
     AudioSource audioPlayer;
-    
+
+
+    private parentClass test;
     void Start()
     {
+        test = GetComponent<parentClass>();
+
+
         isControllable = true;
         audioPlayer = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
@@ -59,12 +65,20 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            test.Test();
+        }
         if (!controller.collisions.below && velocity.y != 0)
             anim.SetBool("midAir", true);
         else
             anim.SetBool("midAir", false);
 
-
+        if (Input.GetKey(KeyCode.Z))
+        {
+            anim.Play("swordStrike");
+        }
     }
 
     void FixedUpdate()

@@ -1,0 +1,778 @@
+fileFormatVersion: 2
+guid: 0a25533e51e77874eb07929b489b6821
+timeCreated: 1452539744
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_0
+    21300002: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_1
+    21300004: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_2
+    21300006: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_3
+    21300008: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_4
+    21300010: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_5
+    21300012: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_6
+    21300014: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_7
+    21300016: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_8
+    21300018: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_9
+    21300020: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_10
+    21300022: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_11
+    21300024: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_12
+    21300026: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_13
+    21300028: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_14
+    21300030: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_15
+    21300032: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_16
+    21300034: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_17
+    21300036: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_18
+    21300038: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_19
+    21300040: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_20
+    21300042: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_21
+    21300044: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_22
+    21300046: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_23
+    21300048: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_24
+    21300050: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_25
+    21300052: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_26
+    21300054: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_27
+    21300056: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_28
+    21300058: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_29
+    21300060: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_30
+    21300062: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_31
+    21300064: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_32
+    21300066: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_33
+    21300068: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_34
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 8
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 386
+        width: 74
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 21}
+        - {x: -37, y: 20}
+        - {x: -37, y: -17}
+        - {x: -34, y: -21}
+        - {x: 37, y: -21}
+        - {x: 37, y: 10}
+        - {x: 14, y: 21}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 386
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 31}
+        - {x: -30, y: 21}
+        - {x: -30, y: 6}
+        - {x: -11, y: -29}
+        - {x: -9, y: -31}
+        - {x: 30, y: -31}
+        - {x: 30, y: 13}
+        - {x: 1, y: 31}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 386
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: -22}
+        - {x: 18.5, y: -22}
+        - {x: 21.5, y: -14}
+        - {x: 21.5, y: 14}
+        - {x: 5.5, y: 22}
+        - {x: -15.5, y: 22}
+        - {x: -21.5, y: -4}
+        - {x: -21.5, y: -22}
+        - {x: -6.5, y: -22}
+        - {x: -5.5, y: -21}
+        - {x: -4.5, y: -17}
+        - {x: -2.5, y: -18}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 386
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.5, y: 16.5}
+        - {x: 5.5, y: 10.5}
+        - {x: 5.5, y: 8.5}
+        - {x: 7.5, y: 6.5}
+        - {x: 4.5, y: 5.5}
+        - {x: 5.5, y: 10.5}
+        - {x: 5.5, y: 16.5}
+        - {x: 2.5, y: 21.5}
+        - {x: -14.5, y: 21.5}
+        - {x: -24.5, y: 1.5}
+        - {x: -24.5, y: -21.5}
+        - {x: 17.5, y: -21.5}
+        - {x: 24.5, y: -2.5}
+        - {x: 24.5, y: 19.5}
+        - {x: 23.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_4
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 386
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: 12.5}
+        - {x: 11.5, y: 21.5}
+        - {x: -10.5, y: 21.5}
+        - {x: -20.5, y: 1.5}
+        - {x: -20.5, y: -21.5}
+        - {x: 20.5, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_5
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 386
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 21.5}
+        - {x: -18.5, y: 0.5}
+        - {x: -18.5, y: -21.5}
+        - {x: 18.5, y: -21.5}
+        - {x: 18.5, y: 18.5}
+        - {x: 12.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_6
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 386
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 22}
+        - {x: -19.5, y: -6}
+        - {x: -19.5, y: -22}
+        - {x: 19.5, y: -22}
+        - {x: 19.5, y: 9}
+        - {x: 8.5, y: 22}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 338
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 21.5}
+        - {x: -22.5, y: 17.5}
+        - {x: -22.5, y: -6.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 22.5, y: -21.5}
+        - {x: 22.5, y: 17.5}
+        - {x: 13.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_8
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 338
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 17.5}
+        - {x: -26.5, y: 17.5}
+        - {x: -26.5, y: -17.5}
+        - {x: 20.5, y: -17.5}
+        - {x: 20.5, y: -4.5}
+        - {x: 8.5, y: 12.5}
+      - - {x: 23.5, y: -7.5}
+        - {x: 25.5, y: -9.5}
+        - {x: 26.5, y: -9.5}
+        - {x: 26.5, y: -4.5}
+        - {x: 24.5, y: -4.5}
+      - - {x: 20.5, y: -8.5}
+        - {x: 23.5, y: -7.5}
+        - {x: 23.5, y: -4.5}
+        - {x: 20.5, y: -3.5}
+        - {x: 18.5, y: -5.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_9
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 338
+        width: 59
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.5, y: 17.5}
+        - {x: -23.5, y: 17.5}
+        - {x: -29.5, y: 7.5}
+        - {x: -29.5, y: -16.5}
+        - {x: -22.5, y: -17.5}
+        - {x: 29.5, y: -17.5}
+        - {x: 29.5, y: -8.5}
+        - {x: 23.5, y: 16.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 283
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: 21.5}
+        - {x: -18.5, y: 0.5}
+        - {x: -18.5, y: -21.5}
+        - {x: 18.5, y: -21.5}
+        - {x: 18.5, y: 18.5}
+        - {x: 12.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 283
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: 6.5}
+        - {x: 14.5, y: 19.5}
+        - {x: 10.5, y: 21.5}
+        - {x: -12.5, y: 21.5}
+        - {x: -19.5, y: 1.5}
+        - {x: -19.5, y: -21.5}
+        - {x: 19.5, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 283
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.5, y: 21.5}
+        - {x: -19.5, y: 21.5}
+        - {x: -23.5, y: 11.5}
+        - {x: -23.5, y: -21.5}
+        - {x: 21.5, y: -21.5}
+        - {x: 23.5, y: -17.5}
+        - {x: 23.5, y: 0.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 285
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 283
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -18.5}
+        - {x: 26, y: -16.5}
+        - {x: 26, y: -6.5}
+        - {x: 8, y: 20.5}
+        - {x: 5, y: 21.5}
+        - {x: -18, y: 21.5}
+        - {x: -26, y: 1.5}
+        - {x: -26, y: -21.5}
+        - {x: 15, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_15
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 284
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 21.5}
+        - {x: -23.5, y: 7.5}
+        - {x: -23.5, y: -21.5}
+        - {x: 20.5, y: -21.5}
+        - {x: 23.5, y: -15.5}
+        - {x: 23.5, y: -1.5}
+        - {x: 4.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_16
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 284
+        width: 71
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 21.5}
+        - {x: -35.5, y: 11.5}
+        - {x: -35.5, y: -19.5}
+        - {x: -30.5, y: -21.5}
+        - {x: 35.5, y: -21.5}
+        - {x: 35.5, y: -1.5}
+        - {x: 18.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_17
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 284
+        width: 56
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 21.5}
+        - {x: -28, y: -5.5}
+        - {x: -11, y: -21.5}
+        - {x: 28, y: -21.5}
+        - {x: 28, y: 17.5}
+        - {x: 20, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 206
+        width: 80
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 11}
+        - {x: 21, y: 21}
+        - {x: 13, y: 17}
+        - {x: 9, y: 12}
+        - {x: 4, y: 12}
+        - {x: -3, y: 9}
+        - {x: -8, y: 0}
+        - {x: -6, y: -9}
+        - {x: -12, y: 6}
+        - {x: -1, y: 26}
+        - {x: -26, y: 26}
+        - {x: -40, y: 8}
+        - {x: -40, y: -24}
+        - {x: -26, y: -26}
+        - {x: 40, y: -26}
+        - {x: 40, y: -10}
+        - {x: 38, y: 2}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_19
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 206
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 34}
+        - {x: -31, y: 20}
+        - {x: -31, y: -1}
+        - {x: -9, y: -34}
+        - {x: 31, y: -34}
+        - {x: 31, y: 33}
+        - {x: 29, y: 34}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 206
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: 22}
+        - {x: -17.5, y: 22}
+        - {x: -24.5, y: -5}
+        - {x: -24.5, y: -22}
+        - {x: 19.5, y: -22}
+        - {x: 24.5, y: -11}
+        - {x: 24.5, y: 7}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_21
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 206
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: -15.5}
+        - {x: 26, y: 2.5}
+        - {x: 26, y: 21.5}
+        - {x: -16, y: 21.5}
+        - {x: -26, y: 1.5}
+        - {x: -26, y: -21.5}
+        - {x: 13, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 158
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 21.5}
+        - {x: -22.5, y: 17.5}
+        - {x: -22.5, y: -6.5}
+        - {x: -17.5, y: -21.5}
+        - {x: 22.5, y: -21.5}
+        - {x: 22.5, y: 17.5}
+        - {x: 13.5, y: 21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_23
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 158
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 17.5}
+        - {x: -26.5, y: -17.5}
+        - {x: 20.5, y: -17.5}
+        - {x: 20.5, y: -14.5}
+        - {x: -13.5, y: 17.5}
+      - - {x: 23.5, y: -7.5}
+        - {x: 25.5, y: -9.5}
+        - {x: 26.5, y: -9.5}
+        - {x: 26.5, y: -4.5}
+        - {x: 24.5, y: -4.5}
+      - - {x: 20.5, y: -8.5}
+        - {x: 23.5, y: -7.5}
+        - {x: 23.5, y: -4.5}
+        - {x: 20.5, y: -3.5}
+        - {x: 18.5, y: -5.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_24
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 158
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.5, y: 17.5}
+        - {x: -21.5, y: 9.5}
+        - {x: -31.5, y: -1.5}
+        - {x: -31.5, y: -13.5}
+        - {x: -22.5, y: -17.5}
+        - {x: 29.5, y: -17.5}
+        - {x: 29.5, y: -11.5}
+        - {x: -2.5, y: 17.5}
+      - - {x: 27.5, y: -7.5}
+        - {x: 28.5, y: -10.5}
+        - {x: 31.5, y: -10.5}
+        - {x: 31.5, y: -5.5}
+        - {x: 29.5, y: -5.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_25
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 158
+        width: 71
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 17.5}
+        - {x: -35.5, y: -3.5}
+        - {x: -35.5, y: -16.5}
+        - {x: -31.5, y: -17.5}
+        - {x: 35.5, y: -17.5}
+        - {x: 35.5, y: -10.5}
+        - {x: 5.5, y: 17.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_26
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 158
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 17.5}
+        - {x: -8, y: 9.5}
+        - {x: -40, y: -4.5}
+        - {x: -40, y: -9.5}
+        - {x: -12, y: -17.5}
+        - {x: 40, y: -17.5}
+        - {x: 40, y: -10.5}
+        - {x: 10, y: 17.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_27
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 159
+        width: 80
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: -13}
+        - {x: -13, y: -21}
+        - {x: 40, y: -21}
+        - {x: 40, y: 21}
+        - {x: -11, y: 21}
+        - {x: -40, y: 9}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_28
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 59
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 24.5}
+        - {x: -22, y: 24.5}
+        - {x: -22, y: -21.5}
+        - {x: -21, y: -24.5}
+        - {x: -2, y: -24.5}
+        - {x: 22, y: -13.5}
+        - {x: 22, y: -2.5}
+        - {x: 14, y: -0.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_29
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 58
+        width: 81
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 24.5}
+        - {x: -22.5, y: -14.5}
+        - {x: -19.5, y: -24.5}
+        - {x: -2.5, y: -24.5}
+        - {x: 40.5, y: -9.5}
+        - {x: 40.5, y: 9.5}
+        - {x: 11.5, y: 24.5}
+      - - {x: -37.5, y: -3.5}
+        - {x: -37.5, y: -0.5}
+        - {x: -40.5, y: 0.5}
+        - {x: -40.5, y: -4.5}
+      - - {x: -35.5, y: -3.5}
+        - {x: -32.5, y: -2.5}
+        - {x: -32.5, y: 0.5}
+        - {x: -35.5, y: 1.5}
+        - {x: -37.5, y: -0.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_30
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 58
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: -24.5}
+        - {x: 18.5, y: -24.5}
+        - {x: 32.5, y: -22.5}
+        - {x: 32.5, y: 7.5}
+        - {x: 20.5, y: 24.5}
+        - {x: -32.5, y: 24.5}
+        - {x: -32.5, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 58
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: -24.5}
+        - {x: 18.5, y: -24.5}
+        - {x: 32.5, y: -22.5}
+        - {x: 32.5, y: 7.5}
+        - {x: 20.5, y: 24.5}
+        - {x: -32.5, y: 24.5}
+        - {x: -32.5, y: -21.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_32
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 58
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: 31.5}
+        - {x: -10.5, y: 31.5}
+        - {x: -32.5, y: 19.5}
+        - {x: -32.5, y: 8.5}
+        - {x: -30.5, y: 4.5}
+        - {x: -32.5, y: -2.5}
+        - {x: -32.5, y: -27.5}
+        - {x: -31.5, y: -31.5}
+        - {x: -8.5, y: -31.5}
+        - {x: 32.5, y: -17.5}
+        - {x: 32.5, y: 12.5}
+        - {x: 29.5, y: 19.5}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_33
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 59
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 36}
+        - {x: -27, y: 36}
+        - {x: -27, y: -28}
+        - {x: -24, y: -36}
+        - {x: -12, y: -36}
+        - {x: -4, y: -27}
+        - {x: 27, y: 9}
+        - {x: 27, y: 20}
+    - name: zero_z_saber_actions___x3_style_by_silent_the_hedgehog-d4k1fec_34
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 62
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 24.5}
+        - {x: -19, y: 24.5}
+        - {x: -19, y: -15.5}
+        - {x: -8, y: -24.5}
+        - {x: 5, y: -24.5}
+        - {x: 7, y: -23.5}
+        - {x: 11, y: -14.5}
+        - {x: 19, y: 4.5}
+        - {x: 19, y: 19.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

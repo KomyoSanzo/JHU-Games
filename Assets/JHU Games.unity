@@ -262,6 +262,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2128796121}
     m_Modifications:
+    - target: {fileID: 11494176, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
+      propertyPath: testSkills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 499740, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
       propertyPath: m_LocalPosition.x
       value: 21.47
@@ -295,13 +299,9 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11494176, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
-      propertyPath: projectileSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11467492, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
-      propertyPath: collisionMask.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
+      propertyPath: testSkills.Array.data[0]
+      value: 
+      objectReference: {fileID: 192936, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
   m_IsPrefabParent: 0
