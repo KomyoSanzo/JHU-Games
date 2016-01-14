@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class WeaponControllerTest : MonoBehaviour {
-    public GameObject[] skills;
+    //public Skill[] skills;
+    Skill[] skills;
 
     private GameObject activeSkill;
     private PlayerScript playerInformation;
@@ -11,19 +12,36 @@ public class WeaponControllerTest : MonoBehaviour {
     private float[] currentCooldowns;
     private KeyCode[] inputCodes;
 
+    private int currentAbility;
+
+    Animator animator;
+
     void Start ()
     {
-        inputCodes[1] = KeyCode.Q;
-        inputCodes[2] = KeyCode.W;
-        inputCodes[3] = KeyCode.E;
-        inputCodes[4] = KeyCode.R;
+        skills = GetComponentsInChildren<Skill>();
 
+        animator = GetComponentInParent<Animator>();
+        playerInformation = GetComponentInParent<PlayerScript>();
+
+        inputCodes = new KeyCode[4];
+        inputCodes[0] = KeyCode.Q;
+        inputCodes[1] = KeyCode.W;
+        inputCodes[2] = KeyCode.E;
+        inputCodes[3] = KeyCode.R;
+
+        currentCooldowns = new float[skills.Length];
+        skillInformation = new Skill[skills.Length];
 
         for (int i = 0; i < skills.Length; i++)
         {
             skillInformation[i] = skills[i].GetComponent<Skill>();
+            skillInformation[i].animator = animator;
+            skillInformation[i].playerInformation = playerInformation;
             currentCooldowns[i] = 0;
         }
+
+
+
 	}
 	
 	void Update ()
@@ -33,14 +51,20 @@ public class WeaponControllerTest : MonoBehaviour {
         {
             if (checkSkill(i))
             {
-                if (Input.GetKey(inputCodes[i]))
+                if (Input.GetKey(inputCodes[i]) && playerInformation.isControllable)
                 {
+                    currentAbility = i;
                     skillInformation[i].Activate();
+                    currentCooldowns[i] = skillInformation[i].cooldown;
                 }
             }
         }
 	}
 
+    void abilityChannelEnd()
+    {
+        skillInformation[currentAbility].endChannel();
+    }
 
     bool checkSkill(int i)
     {
@@ -68,13 +92,18 @@ public class WeaponControllerTest : MonoBehaviour {
     void OnGUI()
     {
         GUILayout.BeginHorizontal();
-        foreach (var skill in skills)
+        
+
+        for (int i = 0; i < skills.Length; i++)
         {
-            GUI.color = (skill == activeSkill) ? Color.yellow : Color.gray;
-            if (GUILayout.Button(skill.name, GUILayout.Width(64), GUILayout.Height(64)))
-            {
-                SetActiveSkill(skill);
-            }
+            GUI.color = Color.yellow;
+            string displayText = skills[i].name + '\n';
+            if (currentCooldowns[i] == 0)
+                displayText += "READY";
+            else
+                displayText += currentCooldowns[i];
+            displayText = displayText + '\n' + ((char)inputCodes[i]).ToString().ToUpper();
+            GUILayout.TextArea(displayText, GUILayout.Width(128), GUILayout.Height(64));
         }
         GUILayout.EndHorizontal();
     }

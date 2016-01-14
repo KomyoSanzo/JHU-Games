@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477324}
+  - 114: {fileID: 11498350}
   m_Layer: 0
   m_Name: swordSlash
   m_TagString: Untagged
@@ -27,13 +28,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11498350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5b9eb8c58884641a81fa2f1920ea52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Sword Slash
+  cooldown: 1
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+  hitbox: {fileID: 11420588, guid: 141f3fedb99e55a41b15b51418701ab1, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: skillName
+      value: Sword Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b196ee2d33f52d44b229b030dc80680, type: 3}
+    - target: {fileID: 0}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 11420588, guid: 141f3fedb99e55a41b15b51418701ab1,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120822}

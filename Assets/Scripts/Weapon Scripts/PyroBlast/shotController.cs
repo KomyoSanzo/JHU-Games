@@ -5,6 +5,7 @@ public class shotController : MonoBehaviour {
 
     Transform transform;
     
+
     float travelDistance = 30;
     Vector3 startingDistance;
 
@@ -19,4 +20,12 @@ public class shotController : MonoBehaviour {
             Destroy(gameObject);
         }    
 	}
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        else
+            Destroy(gameObject);
+    }
 }

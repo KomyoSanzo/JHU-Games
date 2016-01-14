@@ -6,7 +6,7 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
-    Vector3 velocity;
+    [HideInInspector] public Vector3 velocity;
     float velocityXSmoothing;
     
 
@@ -42,17 +42,13 @@ public class PlayerScript : MonoBehaviour
 
 
 
-    Controller2D controller;
+    [HideInInspector] public Controller2D controller;
     Animator anim;
     AudioSource audioPlayer;
 
-
-    private parentClass test;
+    
     void Start()
     {
-        test = GetComponent<parentClass>();
-
-
         isControllable = true;
         audioPlayer = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
@@ -66,61 +62,56 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            test.Test();
-        }
         if (!controller.collisions.below && velocity.y != 0)
             anim.SetBool("midAir", true);
         else
             anim.SetBool("midAir", false);
 
-        if (Input.GetKey(KeyCode.Z))
-        {
-            anim.Play("swordStrike");
-        }
     }
 
     void FixedUpdate()
     {
-        
+
         CheckDash();
-        
+
 
         if (controller.collisions.above || controller.collisions.below)
             velocity.y = 0;
 
         Vector2 input;
         if (isControllable)
+        {
             input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        else
-            input = new Vector2(0, 0);
-            
-        if (Input.GetKey(KeyCode.Space) && controller.collisions.below)
-        {
-            velocity.y = jumpVelocity;
-            audioPlayer.clip = audioClips[6];
-            audioPlayer.Play();
-        }
 
-        if (input.x != 0 && controller.collisions.below)
-        {
-            anim.SetBool("walking", true);
-            if (!audioPlayer.isPlaying)
+            if (Input.GetKey(KeyCode.Space) && controller.collisions.below)
             {
-                audioPlayer.clip = audioClips[Random.Range(4, 6)];
+                velocity.y = jumpVelocity;
+                audioPlayer.clip = audioClips[6];
                 audioPlayer.Play();
             }
+
+            if (input.x != 0 && controller.collisions.below)
+            {
+                anim.SetBool("walking", true);
+                if (!audioPlayer.isPlaying)
+                {
+                    audioPlayer.clip = audioClips[Random.Range(4, 6)];
+                    audioPlayer.Play();
+                }
+            }
+            else
+                anim.SetBool("walking", false);
+
+            float targetVelocityX = input.x * moveSpeed;
+            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
+
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
         }
         else
-            anim.SetBool("walking", false);
-
-        float targetVelocityX = input.x * moveSpeed;
-        velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
-
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
+        {
+            controller.Move(velocity * Time.deltaTime);
+        }
         if (velocity.x > 0 && !facingRight)
             Flip();
         else if (velocity.x < 0  && facingRight)
@@ -160,22 +151,12 @@ public class PlayerScript : MonoBehaviour
             }
             if (dashButtonCooldown > 0 && (dashRightButtonCount == 1 || dashLeftButtonCount == 1) && dashCurrentCooldown == 0)
             {
-                if (dashRight)
-                {
-                    velocity.x = 30;
-                    velocity.y = 10;
-                }
-                else
-                {
-                    velocity.x = -30;
-                    velocity.y = 10;
-                }
                 dashCurrentCooldown = dashCooldown;
                 audioPlayer.clip = audioClips[0];
                 audioPlayer.Play();
                 print("double tapped!");
                 anim.Play("dashAnimation");
-                StartCoroutine(dashCorouting());
+                StartCoroutine(dashCorouting(dashRight));
             }
             else
             {
@@ -208,11 +189,18 @@ public class PlayerScript : MonoBehaviour
     }
 
    
-    IEnumerator dashCorouting()
+    IEnumerator dashCorouting(bool direction)
     {
+        anim.SetBool("dashing", true);
+
         isControllable = false;
+        if (direction)
+            velocity = new Vector2(25f, 0);
+        else
+            velocity = new Vector2(-25f, 0);
         yield return new WaitForSeconds(.2f);
         print("hello world!");
         isControllable = true;
+        anim.SetBool("dashing", false);
     }
 }

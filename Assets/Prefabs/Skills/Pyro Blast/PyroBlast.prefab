@@ -40,7 +40,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Pyro Blast
-  cooldown: 5
+  cooldown: 1
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+  shotPrefab: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
+  projectileSpeed: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -66,8 +70,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cooldown
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shotPrefab
+      value: 
+      objectReference: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192936}
