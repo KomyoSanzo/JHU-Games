@@ -97,7 +97,7 @@ public class WeaponControllerTest : MonoBehaviour {
         for (int i = 0; i < skills.Length; i++)
         {
             GUI.color = Color.yellow;
-            string displayText = skills[i].name + '\n';
+            string displayText = skills[i].skillName + '\n';
             if (currentCooldowns[i] == 0)
                 displayText += "READY";
             else
