@@ -3,13 +3,14 @@ using System.Collections;
 
 [RequireComponent (typeof (Controller2D))]
 
-public class EnemyScript : MonoBehaviour {
+public class AIMoveScript : MonoBehaviour {
     public LayerMask enemyMask;
     public Transform enemyLocation;
     public int detectionDistance;
     public int health;
     public float speed = 1.0f;
     
+        
     Transform myTrans;
     float myWidth, myHeight;
     SpriteRenderer mySprite;
@@ -42,6 +43,7 @@ public class EnemyScript : MonoBehaviour {
     Animator anim;
     AudioSource audioPlayer;
 
+
 	// Use this for initialization
 	void Start () {
         myTrans = this.transform;
@@ -49,7 +51,9 @@ public class EnemyScript : MonoBehaviour {
         myWidth = mySprite.bounds.extents.x;
         myHeight = mySprite.bounds.extents.y;
 
-        facingRight = false;
+        facingRight = true;
+
+
         controller = GetComponent<Controller2D>();
         gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
@@ -64,32 +68,48 @@ public class EnemyScript : MonoBehaviour {
     {
         if (controller.collisions.above || controller.collisions.below)
             velocity.y = 0;
-
+        Vector2 lineCastPos;
         //Use this position to cast the isGrounded/isBlocked lines from
-        Vector2 lineCastPos = myTrans.position.toVector2() - myTrans.right.toVector2() * myWidth - Vector2.up *myHeight;
+        if (facingRight)
+        {
+            lineCastPos = myTrans.position.toVector2() 
+                + myTrans.right.toVector2() * myWidth - Vector2.up * myHeight;
+        } else
+        {
+            lineCastPos = myTrans.position.toVector2() 
+                - myTrans.right.toVector2() * myWidth - Vector2.up * myHeight;
+        }
         //Check to see if there's ground in front of us before moving forward
         //NOTE: Unity 4.6 and below use "- Vector2.up" instead of "+ Vector2.down"
-        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
+        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down, Color.blue);
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
         //Check to see if there's a wall in front of us before moving forward
-        Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f);
+        Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, Color.blue);
         bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, enemyMask);
         //If theres no ground, turn around. Or if I hit a wall, turn around
 
         if (!isGrounded || isBlocked)
         {
-            Vector3 currRot = myTrans.eulerAngles;
-            currRot.y += 180;
-            myTrans.eulerAngles = currRot;
+            Flip();
             speed *= -1;
         }
 
 
 
-        velocity.x = -myTrans.right.x * speed;
+        velocity.x = speed;
         
 
         velocity.y += gravity * Time.deltaTime;
+        Debug.Log(velocity);
+       
         controller.Move(velocity * Time.deltaTime);
+    }
+    void Flip()
+    {
+       
+        facingRight = !facingRight;
+        Vector3 playerScale = transform.localScale;
+        playerScale.x = playerScale.x * -1;
+        transform.localScale = playerScale;
     }
 }

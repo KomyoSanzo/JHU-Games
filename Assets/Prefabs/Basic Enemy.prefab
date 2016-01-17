@@ -10,8 +10,10 @@ GameObject:
   - 4: {fileID: 487432}
   - 212: {fileID: 21248256}
   - 61: {fileID: 6130186}
+  - 95: {fileID: 9502086}
   - 114: {fileID: 11418092}
-  - 114: {fileID: 11434424}
+  - 114: {fileID: 11424196}
+  - 114: {fileID: 11423722}
   m_Layer: 10
   m_Name: Basic Enemy
   m_TagString: Untagged
@@ -45,6 +47,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.728, y: 3.128}
+--- !u!95 &9502086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167042}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 384443bce756b9448b4c989ea5e91c24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11418092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,7 +85,7 @@ MonoBehaviour:
   collision: {fileID: 0}
   maxClimbingAngle: 80
   maxDescentAngle: 50
---- !u!114 &11434424
+--- !u!114 &11423722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -74,7 +93,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 167042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660912cde4873c4468f8ba001f857e6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 04d74c3f7e0d7894d80cf816b513d1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnemy: 1
+  hp: 1
+--- !u!114 &11424196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373830e8f2808be44a775e1a354458ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMask:
@@ -118,7 +150,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01594c39c86b432429b1dfcef42a1cb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
@@ -126,7 +158,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 384443bce756b9448b4c989ea5e91c24, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167042}
