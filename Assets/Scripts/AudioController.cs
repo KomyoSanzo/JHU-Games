@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/**
+A TO BE IMPLEMENTED world audio controller
+Written by Willis Wang
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class AudioController : MonoBehaviour {

@@ -64,6 +64,7 @@ public class AIMoveScript : MonoBehaviour {
 	    
 	}
 
+
     void FixedUpdate()
     {
         if (controller.collisions.above || controller.collisions.below)
@@ -81,7 +82,9 @@ public class AIMoveScript : MonoBehaviour {
         }
         //Check to see if there's ground in front of us before moving forward
         //NOTE: Unity 4.6 and below use "- Vector2.up" instead of "+ Vector2.down"
-        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down, Color.blue);
+
+        Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
+
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
         //Check to see if there's a wall in front of us before moving forward
         Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, Color.blue);
@@ -100,8 +103,7 @@ public class AIMoveScript : MonoBehaviour {
         
 
         velocity.y += gravity * Time.deltaTime;
-        Debug.Log(velocity);
-       
+
         controller.Move(velocity * Time.deltaTime);
     }
     void Flip()

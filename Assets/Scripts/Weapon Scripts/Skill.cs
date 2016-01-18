@@ -1,22 +1,30 @@
-﻿using UnityEngine;
+﻿/**
+Base script for all skills
+Written by Willis Wang
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class Skill : MonoBehaviour {
-
+    //Skill defining features
+    public Texture2D icon;
     public string skillName;
     public float cooldown;
+
+    //Required Components from Players
     [HideInInspector] public Animator animator;
     [HideInInspector] public PlayerScript playerInformation;
 
-    void Start () {
-	
+    //Obtain components from player
+    void Start ()
+    {
+        animator = GetComponentInParent<Animator>();
+        playerInformation = GetComponentInParent<PlayerScript>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
-
+    //VIRTUAL FUNCTIONS SO THAT THE WEAPONS CONTROLLER CAN CALL THEM
     public virtual void Activate()
     {
         print("activating: " + skillName);

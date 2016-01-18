@@ -13,12 +13,11 @@ public class projectileMovement : MonoBehaviour
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
-
+    
     void Update()
     {
         movement = new Vector2(speed.x * direction.x, speed.y * direction.y);
     }
-
     void FixedUpdate()
     {
         myRigidbody2D.velocity = movement;

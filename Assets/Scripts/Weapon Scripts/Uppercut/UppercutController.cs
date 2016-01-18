@@ -1,16 +1,27 @@
-﻿using UnityEngine;
+﻿/**
+Tatsumaki ability controller 
+Written By Willis Wang
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class UppercutController : Skill{
 
-    PlayerScript playerInformation2;
     AudioSource audioPlayer;
 
     void Start()
     {
+        //Obtain information from player
+        animator = GetComponentInParent<Animator>();
+        playerInformation = GetComponentInParent<PlayerScript>(); 
         audioPlayer = GetComponent<AudioSource>();
     }
 
+
+    /** 
+     * Follows the basic workflow of setting the attack trigger
+     */
 	public override void Activate()
     {
         if (animator == null)
@@ -18,24 +29,50 @@ public class UppercutController : Skill{
             animator = GetComponentInParent<Animator>();
         }
         base.Activate();
-        animator.SetTrigger("uppercut");
+        animator.SetTrigger("uppercut");    
+    }
 
-        if (playerInformation2 == null)
-            playerInformation2 = GetComponentInParent<PlayerScript>();
+    /**
+     * If the animation plays, activate the ability and create a hitbox
+     */
+    public override void endChannel()
+    {
+        base.endChannel();
+        if (playerInformation == null)
+            playerInformation = GetComponentInParent<PlayerScript>();
 
-        playerInformation2.controller.collisions.below = false;
+        playerInformation.controller.collisions.below = false;
         StartCoroutine(moveUp());
         audioPlayer.Play();
     }
 
+
+    //=======================================================
+    //COROUTINES
+    //=======================================================
+
+    /**
+     * Moves the player upwards in the direction the main character is facing
+     */
     IEnumerator moveUp()
     {
-        playerInformation2.isControllable = false;
+        //Set player as uncontrollable and remove gravity effects
+        playerInformation.isControllable = false;
+        playerInformation.gravityModifier = 0;
+
+        //Move player slightly up to avoid moving platform collisions
+        playerInformation.gameObject.transform.Translate(Vector3.up*.5f);
+        
+        //Check the direction of the player and set the upward velocity
         if (playerInformation.facingRight)
-            playerInformation2.velocity = new Vector2(1f, 10f);
+            playerInformation.velocity = new Vector2(1f, 10f);
         else
-            playerInformation2.velocity = new Vector2(-1f, 10f);
+            playerInformation.velocity = new Vector2(-1f, 10f);
+
+        //Wait for the animation to complete, then return control
+        //TO BE IMPLEMENTED: Make the duration dependent on the GetCurrentAnimatorClipInfo length
         yield return new WaitForSeconds(.4f);
-        playerInformation2.isControllable = true;
+        playerInformation.isControllable = true;
+        playerInformation.gravityModifier = 1;
     }
 }

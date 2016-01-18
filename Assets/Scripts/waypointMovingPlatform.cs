@@ -1,30 +1,33 @@
-﻿using UnityEngine;
+﻿/**
+Moving platform controller with waypoints.
+Written by Willis Wang and Alec Tabatchnick
+*/
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
 
 public class waypointMovingPlatform : RayCastController
 {
-    //Add multiple waypoints
-    //Ignore direction, modify only the speed
-    //Add pauses between waypoints
-    //Use splines
-
+    //
     public LayerMask passengerMask;
-    List<PassengerMovement> pMovements;
-    Dictionary<Transform, Controller2D> pDict = new Dictionary<Transform, Controller2D>();
-
+    
+    //PUBLIC SPEED INFORMATION
     public float speed = 1.0F;
     public float easingValue = 2.0F;
 
-    //Waiting info
+    //WAITING INFORMATION
     public float waitTime = 1.0f;
     private float nextMoveTime;
 
+    //PROGRESSION BEHAVIOUR INFORMATION
     public bool loop = true;
     public bool cyclic;
     public GameObject[] waypoints;
 
+
+    //INTERNAL CALCULATION VARIABLES
     private float journeyLength;
     private float fracJourney;
     private Transform startMarker, endMarker;
@@ -37,6 +40,11 @@ public class waypointMovingPlatform : RayCastController
     //Which index was the last waypoint?
     int currentStartPoint;
 
+
+    //PASSENGER INFORMATION
+    List<PassengerMovement> pMovements;
+    Dictionary<Transform, Controller2D> pDict = new Dictionary<Transform, Controller2D>();
+
     public override void Start()
     {
         base.Start();
@@ -46,8 +54,7 @@ public class waypointMovingPlatform : RayCastController
     }
 
     void SetPoints()
-    {
-        //If you reached the end of your travels loop the other way if 
+    { 
         if(currentStartPoint == waypoints.Length-1)
         {
             if (loop)
@@ -70,13 +77,8 @@ public class waypointMovingPlatform : RayCastController
             endMarker = waypoints[(currentStartPoint + 1) % waypoints.Length].transform;
             journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
         }
-        
-
-  
-
-
-
     }
+
 
     void Update()
     {
@@ -142,6 +144,7 @@ public class waypointMovingPlatform : RayCastController
             }
         }
     }
+    
     void CalculateMovement(Vector3 velocity)
     {
         HashSet<Transform> movedPassengers = new HashSet<Transform>();
@@ -225,6 +228,8 @@ public class waypointMovingPlatform : RayCastController
         }
     }
 
+    
+    //Contains information about individual passengers
     struct PassengerMovement
     {
         public Transform transform;

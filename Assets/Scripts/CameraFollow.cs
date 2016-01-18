@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/**
+Controls the battle camera for the player. Inspired by most 2D game camera implementations.
+Written by Willis Wang
+*/
+using UnityEngine;
 using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
