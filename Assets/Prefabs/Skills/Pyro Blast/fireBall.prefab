@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 479278}
   - 212: {fileID: 21211654}
   - 61: {fileID: 6190598}
-  - 114: {fileID: 11446044}
   - 114: {fileID: 11404030}
   - 114: {fileID: 11459792}
   - 82: {fileID: 8215852}
@@ -152,27 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
---- !u!114 &11446044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0456e7584d680f84798b3475662371ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 0
-  horizontalRayCount: 4
-  verticalRayCount: 4
-  horizontalSpacing: 0
-  verticalSpacing: 0
-  collision: {fileID: 0}
-  maxClimbingAngle: 80
-  maxDescentAngle: 50
 --- !u!114 &11459792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9a65e041be3a14f8a561eeafe4d4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  travelDistance: 30
 --- !u!212 &21211654
 SpriteRenderer:
   m_ObjectHideFlags: 1
