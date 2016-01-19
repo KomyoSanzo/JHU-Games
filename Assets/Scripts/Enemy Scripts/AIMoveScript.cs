@@ -4,10 +4,7 @@ using System.Collections;
 [RequireComponent (typeof (Controller2D))]
 
 public class AIMoveScript : MonoBehaviour {
-    public LayerMask enemyMask;
-    public Transform enemyLocation;
-    public int detectionDistance;
-    public int health;
+    public LayerMask collisionMask;
     public float speed = 1.0f;
     
         
@@ -34,11 +31,11 @@ public class AIMoveScript : MonoBehaviour {
     float gravity;
     float jumpVelocity;
 
-    [HideInInspector]
-    public bool facingRight;
-
-    [HideInInspector]
-    public Controller2D controller;
+ //PUBLICALLY ACCESSIBLE VARIABLES FOR OTHER SCRIPTS
+    [HideInInspector] public bool isControllable;
+    [HideInInspector] public bool maintainVelocity;
+    [HideInInspector] public bool facingRight;
+    [HideInInspector] public Controller2D controller;
 
     Animator anim;
     AudioSource audioPlayer;
@@ -51,7 +48,9 @@ public class AIMoveScript : MonoBehaviour {
         myWidth = mySprite.bounds.extents.x;
         myHeight = mySprite.bounds.extents.y;
 
+        isControllable = true;
         facingRight = true;
+        maintainVelocity = true;
 
 
         controller = GetComponent<Controller2D>();
@@ -85,10 +84,10 @@ public class AIMoveScript : MonoBehaviour {
 
         Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
 
-        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, enemyMask);
+        bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, collisionMask);
         //Check to see if there's a wall in front of us before moving forward
         Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, Color.blue);
-        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, enemyMask);
+        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, collisionMask);
         //If theres no ground, turn around. Or if I hit a wall, turn around
 
         if (!isGrounded || isBlocked)
@@ -97,10 +96,16 @@ public class AIMoveScript : MonoBehaviour {
             speed *= -1;
         }
 
+        //If character should continue
+        if (maintainVelocity)
+        {
+            velocity.x = speed;
 
+        } else
+        {
+            velocity.x = 0;
+        }
 
-        velocity.x = speed;
-        
 
         velocity.y += gravity * Time.deltaTime;
 
