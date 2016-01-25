@@ -10,22 +10,9 @@ using System.Collections;
 [RequireComponent (typeof (Controller2D))]
 
 
-public class PlayerScript : MonoBehaviour
+public class PlayerScript : CharacterController
 {
-    //COMPONENTS
-    public AudioClip[] audioClips; //Movement sounds
-    Animator anim;
-    AudioSource audioPlayer;
-
-    //PLAYER VELOCITY INFORMATION
-    [HideInInspector] public Vector3 velocity;
-    float velocityXSmoothing;
     
-    //PHYSICS AND GRAVITY INFORMATION
-    public float jumpHeight = 4;
-    public float jumpTime = .4f;
-    public float moveSpeed = 6;
-    [HideInInspector] public float gravityModifier = 1; //For weapons and internal control purposes. 
 
     //WEANING DIRECTION CHANGES 
     float accelerationTimeAirborne = .2f;
@@ -48,31 +35,14 @@ public class PlayerScript : MonoBehaviour
     float gravity;
     float jumpVelocity;
 
-
-    //PUBLICALLY ACCESSIBLE VARIABLES FOR OTHER SCRIPTS
-    [HideInInspector] public bool isControllable;
-    [HideInInspector] public bool maintainVelocity;
-    [HideInInspector] public bool facingRight;
-    [HideInInspector] public Controller2D controller;
-
+    
     //UNUSED VARIABLES (FOR LATER IMPLEMENTATION)
     [HideInInspector] public bool isAttacking;
 
     void Start()
     {
-        //Initialize Variables
-        isControllable = true;
-        isAttacking = false;
-        maintainVelocity = false;
-        facingRight = true;
-
-        //Get components
-        audioPlayer = GetComponent<AudioSource>();
-        anim = GetComponent<Animator>();
-        controller = GetComponent<Controller2D>();
-
-        //Initiate physics calculations
-        gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2); //Basic kinematic equation. Look it up, Alec. 
+        base.Start();
+        gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
         print("Gravity: " + gravity + " Jump Velocity: " + jumpVelocity);
     }
@@ -91,7 +61,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         //Check for collisions       
-        if (controller.collisions.above || controller.collisions.below)
+        if (base.controller.collisions.above || base.controller.collisions.below)
             velocity.y = 0;
         movementUpdate();
 

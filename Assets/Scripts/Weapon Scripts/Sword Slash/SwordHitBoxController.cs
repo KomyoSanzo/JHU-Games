@@ -15,7 +15,7 @@ public class SwordHitBoxController : MonoBehaviour {
 
     //Player-retrived information
     BoxCollider2D box;
-    public PlayerScript playerInformation;
+    public CharacterController playerInformation;
 
     void Start () {
         box = GetComponent<BoxCollider2D>();

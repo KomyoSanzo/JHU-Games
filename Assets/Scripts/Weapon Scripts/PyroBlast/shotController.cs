@@ -10,6 +10,8 @@ public class shotController : MonoBehaviour {
 
     //Public variables
     public float travelDistance = 30;
+    public string ownerTag;
+
 
     //Private variables
     Transform trans;
@@ -38,7 +40,7 @@ public class shotController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Ignores players
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag.Equals(ownerTag))
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         else
             Destroy(gameObject);

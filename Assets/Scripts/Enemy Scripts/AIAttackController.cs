@@ -37,14 +37,12 @@ public class AIAttackController : MonoBehaviour {
 	void Update () {
         //Get distance to player
         if (getDistanceToPlayer() <= detectionDistance) {
-            Debug.Log("Enemy is detected!");
         }
 
         if (isEnemySeen())
         {
             //Activate the ability
             myWeaponController.activateAbility(0);
-            Debug.Log("I SEE YOU");
         }
 	}
 
@@ -76,7 +74,7 @@ public class AIAttackController : MonoBehaviour {
             //Facing the right way?
             if (((relativePosDiff < 0 && !aiMoveInformation.facingRight) ||
                 (relativePosDiff > 0 && aiMoveInformation.facingRight)) 
-                && Mathf.Abs(verticalDiff) < .5f)
+                && Mathf.Abs(verticalDiff) < 2f)
             {
                 return true;
 
