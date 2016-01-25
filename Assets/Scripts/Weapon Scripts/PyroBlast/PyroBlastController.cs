@@ -36,8 +36,8 @@ public class PyroBlastController : Skill {
     {
         base.endChannel();
         //Instantiate the fireball prefab
-        var shotTransform = Instantiate(shotPrefab.transform) as Transform;
-
+        Transform shotTransform = Instantiate(shotPrefab.transform) as Transform;
+        
         //Adjust the positioning and the direction of the prefab
         shotTransform.position = playerInformation.transform.position;
         if (playerInformation.facingRight)
@@ -49,6 +49,9 @@ public class PyroBlastController : Skill {
 
         //Modifies the projectileMovement controller that is attached to the projectile. 
         projectileMovement move = shotTransform.gameObject.GetComponent<projectileMovement>();
+        shotController shotController = shotTransform.gameObject.GetComponent<shotController>();
+        shotController.ownerTag = this.transform.parent.gameObject.tag;
+
         if (move != null)
         {
             //moves the fireball in the direction of the Main Character
