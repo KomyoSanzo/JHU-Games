@@ -46,6 +46,9 @@ public class AIAttackController : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// Drawing stuff for scene editor
+    /// </summary>
     void OnDrawGizmosSelected()
     {
 
@@ -58,11 +61,20 @@ public class AIAttackController : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Returns a vector with the distance to the player
+    /// </summary>
+    /// <returns></returns>
     float getDistanceToPlayer()
     {
         return Vector3.Distance(myCurrentLocation.position, enemyLocation.position);
     }
 
+    /// <summary>
+    /// Checks if the enemy is facing the player and is within a certain height difference to the player
+    /// 
+    /// </summary>
+    /// <returns>True if seen, false o/w</returns>
     bool isEnemySeen()
     {
         Vector3 enemyPos = enemyLocation.position;
@@ -74,7 +86,7 @@ public class AIAttackController : MonoBehaviour {
             //Facing the right way?
             if (((relativePosDiff < 0 && !aiMoveInformation.facingRight) ||
                 (relativePosDiff > 0 && aiMoveInformation.facingRight)) 
-                && Mathf.Abs(verticalDiff) < 2f)
+                && Mathf.Abs(verticalDiff) < 2f) //Within vertical view threshold
             {
                 return true;
 
