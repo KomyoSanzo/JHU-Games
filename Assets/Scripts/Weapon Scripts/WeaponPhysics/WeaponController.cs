@@ -61,7 +61,9 @@ public class WeaponController : MonoBehaviour {
             if (checkSkill(i))
             {
                 //Check if the player is capable of executing an ability. 
-                if (Input.GetKeyDown(inputCodes[i]) && playerInformation.isControllable && !animator.GetCurrentAnimatorStateInfo(0).IsTag("ability"))
+                if (Input.GetKeyDown(inputCodes[i])
+                    && playerInformation.isControllable 
+                    && !animator.GetCurrentAnimatorStateInfo(0).IsTag("ability"))
                 {
                     //activate, reset cooldowns, and set active ability
                     currentAbility = i;

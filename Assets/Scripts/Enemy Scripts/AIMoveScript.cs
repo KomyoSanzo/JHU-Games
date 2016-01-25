@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent (typeof (Controller2D))]
 
-public class AIMoveScript : MonoBehaviour {
+public class AIMoveScript : CharacterController {
     public LayerMask collisionMask;
     public float speed = 1.0f;
     
@@ -11,17 +11,6 @@ public class AIMoveScript : MonoBehaviour {
     Transform myTrans;
     float myWidth, myHeight;
     SpriteRenderer mySprite;
-
-
-    [HideInInspector]
-    public Vector3 velocity;
-    float velocityXSmoothing;
-
-    //PHSYICS AND GRAVITY INFORMATION
-
-    public float jumpHeight = 4;
-    public float jumpTime = .4f;
-    public float moveSpeed = 6;
 
     //WEANING DIRECTION CHANGES
     float accelerationTimeAirborne = .2f;
@@ -31,42 +20,26 @@ public class AIMoveScript : MonoBehaviour {
     float gravity;
     float jumpVelocity;
 
- //PUBLICALLY ACCESSIBLE VARIABLES FOR OTHER SCRIPTS
-    [HideInInspector] public bool isControllable;
-    [HideInInspector] public bool maintainVelocity;
-    [HideInInspector] public bool facingRight;
-    [HideInInspector] public Controller2D controller;
-
-    Animator anim;
-    AudioSource audioPlayer;
-
 
 	// Use this for initialization
 	void Start () {
+        base.Start();
         myTrans = this.transform;
         mySprite = this.GetComponent<SpriteRenderer>();
         myWidth = mySprite.bounds.extents.x;
         myHeight = mySprite.bounds.extents.y;
 
-        isControllable = true;
-        facingRight = true;
-        maintainVelocity = true;
-
-
-        controller = GetComponent<Controller2D>();
+     
         gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
+        maintainVelocity = true;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
 
 
     void FixedUpdate()
     {
-        if (controller.collisions.above || controller.collisions.below)
+        if (base.controller.collisions.above || base.controller.collisions.below)
             velocity.y = 0;
         Vector2 lineCastPos;
         //Use this position to cast the isGrounded/isBlocked lines from
@@ -105,7 +78,7 @@ public class AIMoveScript : MonoBehaviour {
         {
             velocity.x = 0;
         }
-
+        Debug.Log("velocity: " + velocity.x);
 
         velocity.y += gravity * Time.deltaTime;
 
