@@ -37,6 +37,9 @@ public class CharacterController : MonoBehaviour {
 
 
     // Use this for initialization
+    /// <summary>
+    /// Whenever creating a movement controller, use this as a base
+    /// </summary>
     protected virtual void Start () {
         //Initialize Variables
         isControllable = true;
