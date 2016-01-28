@@ -148,6 +148,8 @@ public class WeaponController : MonoBehaviour {
             GUILayout.TextArea(displayText, GUILayout.Width(80), GUILayout.Height(80));
         }
 
+        GUILayout.TextArea(gameObject.GetComponent<PlayerStats>().Health.ToString(), GUILayout.Width(80), GUILayout.Height(80));
+
 
         GUILayout.EndHorizontal();
     }

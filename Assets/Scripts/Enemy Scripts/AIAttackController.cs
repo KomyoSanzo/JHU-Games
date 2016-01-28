@@ -54,7 +54,6 @@ public class AIAttackController : MonoBehaviour {
             vectorTo.x = this.transform.position.x + detectionDistance;
         Vector3 size = new Vector3(1, 1, 1);
         Gizmos.DrawLine(this.transform.position, vectorTo);
-        Debug.Log("no!");
 
     }
 

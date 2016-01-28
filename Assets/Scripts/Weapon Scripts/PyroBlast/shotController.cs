@@ -6,21 +6,19 @@ Written By Willis Wang
 using UnityEngine;
 using System.Collections;
 
-public class shotController : MonoBehaviour {
+public class shotController : Hitbox {
 
     //Public variables
     public float travelDistance = 30;
-    public string ownerTag;
-
 
     //Private variables
-    Transform trans;
     Vector3 startingDistance;
 
-    void Start ()
+    public override void Start ()
     {
+        base.Start();
+        
         //Obtains and sets the starting location
-        trans = GetComponent<Transform>();
         startingDistance = trans.position;
     }
 	
@@ -43,6 +41,14 @@ public class shotController : MonoBehaviour {
         if (collision.gameObject.tag.Equals(ownerTag))
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         else
+        {
+            print(LayerMask.LayerToName(this.gameObject.layer));
+            print(LayerMask.LayerToName(collision.gameObject.layer));
+
+            CharacterStats collisionStat = collision.gameObject.GetComponent<CharacterStats>();
+            if (collisionStat != null)            
+                collisionStat.TakeDamage(20);
             Destroy(gameObject);
+        }
     }
 }

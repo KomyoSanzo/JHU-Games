@@ -11,7 +11,6 @@ public class PyroBlastController : Skill {
     //Set the ability's basic information and hitbox generator
     public Transform shotPrefab;
     public float projectileSpeed = 5f;
-
     
     /**
      * An overriden method that activates the ability from the weapon controller.

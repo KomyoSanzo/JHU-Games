@@ -6,20 +6,12 @@ Written by Willis Wang
 using UnityEngine;
 using System.Collections;
 
-public class PlayerStats : MonoBehaviour {
-    //PLAYER INFORMATION
-    public float playerHealth = 100f;
-
+public class PlayerStats : CharacterStats {
+    
     float angerStatus;
     float sadStatus;
     float fearStatus;
     float happinessStatus;
-
-    bool paralyzed;
-    bool slowed;
-    bool confused;
-    bool poisoned;
-    bool burning;
 
     float speedModifier = 1f;
     float jumpModifier = 1f;
@@ -40,16 +32,16 @@ public class PlayerStats : MonoBehaviour {
      * Player takes a certain amount of damage. Calleable by other GameObjects.
      * @param damage - the damage to be taken
      */
-    public void TakeDamage(float damage)
+    public override void TakeDamage(float damage)
     {
-        playerHealth -= damage;
+        base.TakeDamage(damage);
         //If player health goes to or below 0, cause player death.
-        if (playerHealth <= 0)
+        if (Health<= 0)
         {
             playerDeath();
         }
     }
-
+    
     //==============================================
     //HELPER FUCTIONS
     //==============================================

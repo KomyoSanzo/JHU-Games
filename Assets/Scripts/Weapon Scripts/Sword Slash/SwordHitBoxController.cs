@@ -6,18 +6,19 @@ Written by Willis Wang
 using UnityEngine;
 using System.Collections;
 
-public class SwordHitBoxController : MonoBehaviour {
+public class SwordHitBoxController : Hitbox {
     //Basic hitbox information
     public float timeAlive = 2f;
 
     //Internal Variables
     float endTime;
-
+    
     //Player-retrived information
     BoxCollider2D box;
     public CharacterController playerInformation;
 
-    void Start () {
+    public override void Start () {
+        base.Start();
         box = GetComponent<BoxCollider2D>();
 
         //Set hitbox death time
@@ -39,10 +40,23 @@ public class SwordHitBoxController : MonoBehaviour {
     //========================================
     //ROUTINES
     //========================================
-    void OnDrawGizmos()
+    /*void OnDrawGizmos()
     {
         //Draw a red box at the hitbox location
         Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(box.offset + (Vector2)transform.position, new Vector2(2, 2));
+        Gizmos.DrawCube((Vector2)box.bounds.center, new Vector2(2, 2));
+    }*/
+
+    void OnCollisionEnter2D (Collision2D collision)
+    {
+        if (!hitObjects.Contains(collision.gameObject.transform))
+        {
+            hitObjects.Add(collision.gameObject.transform);
+            CharacterStats collisionStat = collision.gameObject.GetComponent<CharacterStats>();
+            if (collisionStat != null)
+            {
+                collisionStat.TakeDamage(20);
+            }
+        }
     }
 }

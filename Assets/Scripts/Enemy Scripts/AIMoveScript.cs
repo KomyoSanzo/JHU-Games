@@ -78,7 +78,6 @@ public class AIMoveScript : CharacterController {
         {
             velocity.x = 0;
         }
-        Debug.Log("velocity: " + velocity.x);
 
         velocity.y += gravity * Time.deltaTime;
 

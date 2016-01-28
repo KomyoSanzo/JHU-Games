@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6153390}
   - 82: {fileID: 8266850}
   - 114: {fileID: 11420588}
+  - 50: {fileID: 5015502}
   m_Layer: 0
   m_Name: swordSlashHitBox
   m_TagString: Untagged
@@ -26,11 +27,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.215616, y: -2.1999402, z: 0.01953125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 21.74, y: 0.69, z: 0.01953125}
+  m_LocalScale: {x: 0.56164527, y: 0.22690266, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5015502
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175600}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &6153390
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -42,9 +60,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.1502328, y: 1.2073466}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.2491643, y: 5.444849}
 --- !u!82 &8266850
 AudioSource:
   m_ObjectHideFlags: 1
@@ -130,7 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d446fe9004cbc41887e06806871b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTag: 
   timeAlive: 1
+  playerInformation: {fileID: 0}
 --- !u!212 &21258582
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -184,6 +204,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 1b196ee2d33f52d44b229b030dc80680, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 175600}

@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &104206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467402}
+  - 114: {fileID: 11428718}
+  m_Layer: 0
+  m_Name: PyroBlast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167042
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,15 +28,29 @@ GameObject:
   - 61: {fileID: 6130186}
   - 95: {fileID: 9502086}
   - 114: {fileID: 11418092}
-  - 114: {fileID: 11424196}
-  - 114: {fileID: 11423722}
+  - 114: {fileID: 11475164}
+  - 114: {fileID: 11487966}
+  - 114: {fileID: 11469152}
+  - 114: {fileID: 11467518}
   m_Layer: 10
   m_Name: Basic Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &467402
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -32.95912, y: -5.438612, z: 0.03610396}
+  m_LocalScale: {x: 0.5327836, y: 0.5327836, z: 0.5327836}
+  m_Children: []
+  m_Father: {fileID: 487432}
+  m_RootOrder: 0
 --- !u!4 &487432
 Transform:
   m_ObjectHideFlags: 1
@@ -28,9 +58,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.2, y: 2.6, z: 0}
+  m_LocalPosition: {x: 37.64, y: 3.49, z: 0}
   m_LocalScale: {x: 0.5539553, y: 0.5539553, z: 0.5539553}
-  m_Children: []
+  m_Children:
+  - {fileID: 467402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!61 &6130186
@@ -85,7 +116,77 @@ MonoBehaviour:
   collision: {fileID: 0}
   maxClimbingAngle: 80
   maxDescentAngle: 50
---- !u!114 &11423722
+--- !u!114 &11428718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed7776ef842038429d2557b0b893bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 3a17abbc6504f7b46a04ad9810998606, type: 3}
+  skillName: Firum
+  cooldown: 3
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+  shotPrefab: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
+  projectileSpeed: 0.5
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &11467518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a83c27bbfb717944b97416431a9a630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLocation: {fileID: 0}
+  detectionDistance: 4
+--- !u!114 &11469152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8230e6511206d9f499c8ea1aace1e0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11475164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373830e8f2808be44a775e1a354458ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []
+  velocity: {x: 0, y: 0, z: 0}
+  jumpHeight: 4
+  jumpTime: 0.4
+  moveSpeed: 6
+  isControllable: 0
+  maintainVelocity: 0
+  facingRight: 0
+  controller: {fileID: 0}
+  gravityModifier: 1
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 768
+  speed: 1
+--- !u!114 &11487966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,30 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnemy: 1
   hp: 1
---- !u!114 &11424196
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373830e8f2808be44a775e1a354458ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 768
-  enemyLocation: {fileID: 0}
-  detectionDistance: 0
-  health: 0
-  speed: 1
-  velocity: {x: 0, y: 0, z: 0}
-  jumpHeight: 4
-  jumpTime: 0.4
-  moveSpeed: 6
-  facingRight: 0
-  controller: {fileID: 0}
 --- !u!212 &21248256
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -146,7 +223,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2025126005
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 01594c39c86b432429b1dfcef42a1cb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

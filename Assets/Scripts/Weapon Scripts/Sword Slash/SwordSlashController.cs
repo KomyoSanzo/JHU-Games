@@ -8,7 +8,7 @@ using System.Collections;
 
 public class SwordSlashController : Skill {
     //The hitbox to be instantiated
-    public SwordHitBoxController hitbox;
+    public Transform hitbox;
 
 
 	public override void Activate()
@@ -21,17 +21,26 @@ public class SwordSlashController : Skill {
         base.Activate();
         animator.SetTrigger("SwordSlash");
         
+        
+    }
+
+    public override void endChannel()
+    {
+        base.endChannel();
         //Instantiates the hitbox and modifies it to the players location
-        var newHitBox = Instantiate(hitbox) as SwordHitBoxController;
-        newHitBox.transform.position = playerInformation.transform.position;
-        newHitBox.playerInformation = playerInformation;
+        Transform newHitBox = Instantiate(hitbox.transform) as Transform;
+
+        SwordHitBoxController swordHitBox = newHitBox.gameObject.GetComponent<SwordHitBoxController>();
+        swordHitBox.ownerTag = this.transform.parent.gameObject.tag;
+        swordHitBox.transform.position = playerInformation.transform.position;
+        swordHitBox.playerInformation = playerInformation;
 
         //Checks the player location for directional instantiation. 
         if (playerInformation.facingRight)
         {
             Vector3 playerScale = newHitBox.transform.localScale;
             playerScale.x = playerScale.x * -1;
-            newHitBox.transform.localScale = playerScale;
+            newHitBox.localScale = playerScale;
         }
 
     }
