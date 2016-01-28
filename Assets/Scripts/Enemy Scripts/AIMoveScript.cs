@@ -20,21 +20,23 @@ public class AIMoveScript : CharacterController {
     float gravity;
     float jumpVelocity;
 
+    BoxCollider2D bounds;
 
 	// Use this for initialization
 	void Start () {
         base.Start();
         myTrans = this.transform;
         mySprite = this.GetComponent<SpriteRenderer>();
-        myWidth = mySprite.bounds.extents.x;
-        myHeight = mySprite.bounds.extents.y;
-
-     
+        bounds = this.GetComponent<BoxCollider2D>();
+        myWidth = bounds.bounds.extents.x;
+        //myWidth = mySprite.bounds.extents.x;
+        //myHeight = mySprite.bounds.extents.y;
+        myHeight = bounds.bounds.extents.y;
         gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
         maintainVelocity = true;
 	}
-	
+
 
 
     void FixedUpdate()
@@ -45,12 +47,12 @@ public class AIMoveScript : CharacterController {
         //Use this position to cast the isGrounded/isBlocked lines from
         if (facingRight)
         {
-            lineCastPos = myTrans.position.toVector2() 
+            lineCastPos = myTrans.position.toVector2()
                 + myTrans.right.toVector2() * myWidth - Vector2.up * myHeight;
         } else
         {
-            lineCastPos = myTrans.position.toVector2() 
-                - myTrans.right.toVector2() * myWidth - Vector2.up * myHeight;
+            lineCastPos = myTrans.position.toVector2()
+                - myTrans.right.toVector2() * myWidth - Vector2.up * myHeight; //Adding an offset to the height. 
         }
         //Check to see if there's ground in front of us before moving forward
         //NOTE: Unity 4.6 and below use "- Vector2.up" instead of "+ Vector2.down"
@@ -59,12 +61,18 @@ public class AIMoveScript : CharacterController {
 
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, collisionMask);
         //Check to see if there's a wall in front of us before moving forward
-        Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, Color.blue);
-        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * .05f, collisionMask);
-        //If theres no ground, turn around. Or if I hit a wall, turn around
+        bool blocked = false;
 
-        if (!isGrounded || isBlocked)
+        if (base.controller.collisions.right || base.controller.collisions.left)
         {
+            Debug.Log(base.controller.collisions.right +" LSdkfj " + base.controller.collisions.left);
+            blocked = true;
+        }
+
+        if (!isGrounded || blocked)
+        {
+            
+            Debug.Log("IS not grounded: " + !isGrounded + " isBlocked: " + blocked);
             Flip();
             speed *= -1;
         }
@@ -78,7 +86,6 @@ public class AIMoveScript : CharacterController {
         {
             velocity.x = 0;
         }
-        Debug.Log("velocity: " + velocity.x);
 
         velocity.y += gravity * Time.deltaTime;
 
