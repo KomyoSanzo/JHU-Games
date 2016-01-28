@@ -9,7 +9,7 @@ namespace GitMerge
         {
             if(Application.platform == RuntimePlatform.WindowsEditor)
             {
-                return @"C:\Program Files (x86)\Git\bin\git.exe";
+                return @"C:\Users\atab7\AppData\Local\Programs\Git\cmd\git.exe";
             }
             return @"/usr/bin/git";
         }
