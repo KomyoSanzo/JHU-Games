@@ -39,7 +39,7 @@ public class PlayerScript : CharacterController
     //UNUSED VARIABLES (FOR LATER IMPLEMENTATION)
     [HideInInspector] public bool isAttacking;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
@@ -49,6 +49,7 @@ public class PlayerScript : CharacterController
 
     void Update()
     {
+        
         CheckDash(); //Dashing is placed in Update due to more consistent input reading
         
         //Check if player is in midair or not

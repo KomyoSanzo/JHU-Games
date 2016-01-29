@@ -16,6 +16,7 @@ public class SwordHitBoxController : Hitbox {
     //Player-retrived information
     BoxCollider2D box;
     public CharacterController playerInformation;
+    Animator playerAnim;
 
     public override void Start () {
         base.Start();
@@ -25,16 +26,22 @@ public class SwordHitBoxController : Hitbox {
         endTime = Time.time + timeAlive;
         
         //Set player as the parent of the object
-        transform.parent = GameObject.FindGameObjectWithTag("Player").transform;        
+        transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
+        playerAnim = GetComponentInParent<Animator>();       
 	}
 	
 	void Update () {
         //Constantly stay by the player
         transform.position = playerInformation.gameObject.transform.position;
 
-        //Check for hitbox duration
-        if (endTime < Time.time)
+        if (!playerAnim.GetCurrentAnimatorStateInfo(0).IsName("swordStrike"))
+        {
             Destroy(gameObject);
+        }
+       
+        //Check for hitbox duration
+        //if (endTime < Time.time)
+        //    Destroy(gameObject);
 	}
 
     //========================================

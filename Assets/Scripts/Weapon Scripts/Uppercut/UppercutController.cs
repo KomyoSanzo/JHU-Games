@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 
 public class UppercutController : Skill{
-
+    public Transform hitboxPrefab;
     AudioSource audioPlayer;
 
     void Start()
@@ -38,6 +38,8 @@ public class UppercutController : Skill{
     public override void endChannel()
     {
         base.endChannel();
+
+
         if (playerInformation == null)
             playerInformation = GetComponentInParent<PlayerScript>();
 
@@ -60,6 +62,25 @@ public class UppercutController : Skill{
         playerInformation.isControllable = false;
         playerInformation.gravityModifier = 0;
 
+
+        //Creates the hitbox
+        Transform uppercutHitBox = Instantiate(hitboxPrefab.transform) as Transform;
+        UppercutHitboxController newHitbox = uppercutHitBox.gameObject.GetComponent<UppercutHitboxController>();
+
+        newHitbox.ownerTag = this.transform.parent.gameObject.tag;
+        newHitbox.transform.position = playerInformation.transform.position;
+        newHitbox.playerInformation = playerInformation;
+
+        //Checks the player location for directional instantiation. 
+        if (playerInformation.facingRight)
+        {
+            Vector3 playerScale = uppercutHitBox.transform.localScale;
+            playerScale.x = playerScale.x * -1;
+            uppercutHitBox.localScale = playerScale;
+        }
+
+
+
         //Move player slightly up to avoid moving platform collisions
         playerInformation.gameObject.transform.Translate(Vector3.up*.5f);
         
@@ -74,5 +95,6 @@ public class UppercutController : Skill{
         yield return new WaitForSeconds(.4f);
         playerInformation.isControllable = true;
         playerInformation.gravityModifier = 1;
+        Destroy(uppercutHitBox.gameObject);
     }
 }

@@ -134,7 +134,15 @@ Prefab:
       objectReference: {fileID: 1671615795}
     - target: {fileID: 11487966, guid: 833af6fce88808c4995f2fe1bec172e5, type: 2}
       propertyPath: Health
-      value: 40
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9502086, guid: 833af6fce88808c4995f2fe1bec172e5, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475164, guid: 833af6fce88808c4995f2fe1bec172e5, type: 2}
+      propertyPath: jumpTime
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 833af6fce88808c4995f2fe1bec172e5, type: 2}
@@ -351,6 +359,15 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9530388, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21261352, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0eef0d5dd56fc134f9f68b72fb8b16dc,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 11494176, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fe119cbc016a9804f82d63d28f7d8b26, type: 2}
@@ -1078,6 +1095,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11482120, guid: c55373f3c75e8fc45a0f709e14ff798e, type: 2}
+      propertyPath: hitboxPrefab
+      value: 
+      objectReference: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c55373f3c75e8fc45a0f709e14ff798e, type: 2}
   m_IsPrefabParent: 0
