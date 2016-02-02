@@ -65,14 +65,14 @@ public class AIMoveScript : CharacterController {
 
         if (base.controller.collisions.right || base.controller.collisions.left)
         {
-            Debug.Log(base.controller.collisions.right +" LSdkfj " + base.controller.collisions.left);
+            //Debug.Log(base.controller.collisions.right +" LSdkfj " + base.controller.collisions.left);
             blocked = true;
         }
 
         if (!isGrounded || blocked)
         {
             
-            Debug.Log("IS not grounded: " + !isGrounded + " isBlocked: " + blocked);
+            //Debug.Log("IS not grounded: " + !isGrounded + " isBlocked: " + blocked);
             Flip();
             speed *= -1;
         }

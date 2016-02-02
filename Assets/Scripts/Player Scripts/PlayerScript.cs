@@ -23,7 +23,7 @@ public class PlayerScript : CharacterController
     public float dashCooldown = 1;
 
     float dashCurrentCooldown = 0;
-    float dashButtonCooldown = 0.6f;
+    float dashButtonCooldown = .1f;
     int dashRightButtonCount = 0;
     int dashLeftButtonCount = 0;
     bool canDash;

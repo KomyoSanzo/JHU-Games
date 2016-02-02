@@ -13,6 +13,11 @@ public class AIAttackController : MonoBehaviour {
     public float detectionDistance;
 
     /// <summary>
+    /// In Degrees
+    /// </summary>
+    public float detectionFOV;
+
+    /// <summary>
     /// Get the weaponController
     /// </summary>
     private AIWeaponController myWeaponController;
@@ -34,11 +39,8 @@ public class AIAttackController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        //Get distance to player
-        if (getDistanceToPlayer() <= detectionDistance) {
-        }
-
+	void Update ()
+    { 
         if (isEnemySeen())
         {
             //Activate the ability
@@ -55,9 +57,12 @@ public class AIAttackController : MonoBehaviour {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Vector3 vectorTo = this.transform.position;
             vectorTo.x = this.transform.position.x + detectionDistance;
-        Vector3 size = new Vector3(1, 1, 1);
+        Vector3 size = new Vector3(0, 0, 1);
         Gizmos.DrawLine(this.transform.position, vectorTo);
-
+        float hypotenuse = vectorTo.x / Mathf.Cos(detectionFOV);
+        Vector3 arcStart = new Vector3(0, 0, -hypotenuse);
+        UnityEditor.Handles.color = Color.red;
+        UnityEditor.Handles.DrawWireArc(this.transform.position, size, arcStart, 30, 5);
     }
 
     /// <summary>

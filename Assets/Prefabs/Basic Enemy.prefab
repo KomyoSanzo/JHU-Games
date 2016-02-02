@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.64, y: 3.49, z: 0}
+  m_LocalPosition: {x: 34.84, y: 3.93, z: 0}
   m_LocalScale: {x: 0.5539553, y: 0.5539553, z: 0.5539553}
   m_Children:
   - {fileID: 467402}
@@ -75,9 +75,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0000068862905, y: 0.06989929}
   serializedVersion: 2
-  m_Size: {x: 3.728, y: 3.128}
+  m_Size: {x: 3.7280002, y: 2.3724966}
 --- !u!95 &9502086
 Animator:
   serializedVersion: 3
@@ -134,9 +134,6 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   shotPrefab: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
   projectileSpeed: 0.5
-  interactionMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &11467518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +172,7 @@ MonoBehaviour:
   audioClips: []
   velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 4
-  jumpTime: 0.4
+  jumpTime: 0.5
   moveSpeed: 6
   isControllable: 0
   maintainVelocity: 0
@@ -197,8 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d74c3f7e0d7894d80cf816b513d1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnemy: 1
-  hp: 1
+  Health: 20
 --- !u!212 &21248256
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -225,7 +221,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2025126005
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 01594c39c86b432429b1dfcef42a1cb1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eebd100ba50c61846933bd588fba3c76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
