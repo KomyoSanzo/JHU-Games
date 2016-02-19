@@ -36,6 +36,7 @@ public class SimpleCharacterController : MonoBehaviour {
     [HideInInspector]
     public float gravityModifier = 1;  //For weapons and internal control purposes. 
 
+    protected CharacterStats playerStats;
 
 
 
@@ -53,8 +54,9 @@ public class SimpleCharacterController : MonoBehaviour {
         audioPlayer = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         controller = GetComponent<Controller2D>();
+        playerStats = GetComponent<CharacterStats>();
 
     }
-	
+
 
 }

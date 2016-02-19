@@ -33,8 +33,8 @@ public class UppercutHitboxController : Hitbox
             {
                 collisionStat.TakeDamage(20);
                 collision.gameObject.GetComponent<CharacterStats>().setStun(true, 2f);
-                collision.gameObject.GetComponent<CharacterController>().velocity.y += 20f;
-                collision.gameObject.GetComponent<CharacterController>().velocity.x = 0;
+                collision.gameObject.GetComponent<SimpleCharacterController>().velocity.y += 20f;
+                collision.gameObject.GetComponent<SimpleCharacterController>().velocity.x = 0;
 
                 collision.gameObject.transform.Translate(Vector3.up * .5f);
                 collision.gameObject.GetComponent<SimpleCharacterController>().controller.collisions.below = false;

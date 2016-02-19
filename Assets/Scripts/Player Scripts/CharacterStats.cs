@@ -118,10 +118,10 @@ public class CharacterStats : MonoBehaviour {
 
     IEnumerator stunCoroutine(float time)
     {
-        GetComponent<CharacterController>().isControllable = false;
+        GetComponent<SimpleCharacterController>().isControllable = false;
         yield return new WaitForSeconds(time);
         stunned = false;
-        GetComponent<CharacterController>().isControllable = true;
+        GetComponent<SimpleCharacterController>().isControllable = true;
     }
 
     public void setSlow(bool status)
