@@ -36,10 +36,15 @@ public class shotController : Hitbox {
      * @param collision - the object being collided against
      */
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    { 
+
+        Debug.Log("my tag: " + collision.gameObject.tag + ", " + ownerTag);
+
         //Ignores players
         if (collision.gameObject.tag.Equals(ownerTag))
+        {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
         else
         {
             print(LayerMask.LayerToName(this.gameObject.layer));
