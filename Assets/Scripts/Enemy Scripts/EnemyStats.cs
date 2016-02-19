@@ -16,7 +16,10 @@ public class EnemyStats : CharacterStats {
             playerDeath();
         }
     }
-
+    public override void Update()
+    {
+        base.Update();
+    }
     //==============================================
     //HELPER FUCTIONS
     //==============================================

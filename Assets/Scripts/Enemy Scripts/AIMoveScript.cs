@@ -23,7 +23,7 @@ public class AIMoveScript : CharacterController {
     BoxCollider2D bounds;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
         base.Start();
         myTrans = this.transform;
         mySprite = this.GetComponent<SpriteRenderer>();
@@ -39,7 +39,7 @@ public class AIMoveScript : CharacterController {
 
 
 
-    void FixedUpdate()
+    void Update()
     {
         if (base.controller.collisions.above || base.controller.collisions.below)
             velocity.y = 0;
@@ -54,9 +54,7 @@ public class AIMoveScript : CharacterController {
             lineCastPos = myTrans.position.toVector2()
                 - myTrans.right.toVector2() * myWidth - Vector2.up * myHeight; //Adding an offset to the height. 
         }
-        //Check to see if there's ground in front of us before moving forward
-        //NOTE: Unity 4.6 and below use "- Vector2.up" instead of "+ Vector2.down"
-
+        
         Debug.DrawLine(lineCastPos, lineCastPos + Vector2.down);
 
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + Vector2.down, collisionMask);
@@ -73,14 +71,17 @@ public class AIMoveScript : CharacterController {
         {
             
             Debug.Log("IS not grounded: " + !isGrounded + " isBlocked: " + blocked);
-            Flip();
-            speed *= -1;
+            if (velocity.x != 0)
+            {
+                speed *= -1;
+                Flip();
+            }
         }
-
         //If character should continue
         if (maintainVelocity)
         {
-            velocity.x = speed;
+            if (isControllable)
+                velocity.x = speed;
 
         } else
         {
@@ -93,10 +94,13 @@ public class AIMoveScript : CharacterController {
     }
     void Flip()
     {
-       
         facingRight = !facingRight;
         Vector3 playerScale = transform.localScale;
         playerScale.x = playerScale.x * -1;
         transform.localScale = playerScale;
     }
+
+
+    
+
 }

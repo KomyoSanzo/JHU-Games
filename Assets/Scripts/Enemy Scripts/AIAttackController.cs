@@ -39,7 +39,7 @@ public class AIAttackController : MonoBehaviour {
         if (getDistanceToPlayer() <= detectionDistance) {
         }
 
-        if (isEnemySeen())
+        if (isEnemySeen() && aiMoveInformation.isControllable)
         {
             //Activate the ability
             myWeaponController.activateAbility(0);

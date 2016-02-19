@@ -12,8 +12,6 @@ using System.Collections;
 
 public class PlayerScript : CharacterController
 {
-    
-
     //WEANING DIRECTION CHANGES 
     float accelerationTimeAirborne = .2f;
     float accelerationTimeGrounded = .1f;
@@ -45,6 +43,7 @@ public class PlayerScript : CharacterController
         gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
         print("Gravity: " + gravity + " Jump Velocity: " + jumpVelocity);
+        playerStats = GetComponent<PlayerStats>(); 
     }
 
     void Update()
@@ -61,6 +60,7 @@ public class PlayerScript : CharacterController
 
     void FixedUpdate()
     {
+        
         //Check for collisions       
         if (base.controller.collisions.above || base.controller.collisions.below)
             velocity.y = 0;
@@ -126,7 +126,7 @@ public class PlayerScript : CharacterController
                 anim.SetBool("walking", false);
 
             //Wean towards the direction of the input. 
-            float targetVelocityX = input.x * moveSpeed;
+            float targetVelocityX = input.x * playerStats.speedCalculation(moveSpeed);
             velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
         }
         //Apply gravity and move the player using the Controller2D's move function

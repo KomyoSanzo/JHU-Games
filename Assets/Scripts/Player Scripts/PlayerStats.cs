@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerStats : CharacterStats {
-    
+   
     float angerStatus;
     float sadStatus;
     float fearStatus;
@@ -19,12 +19,12 @@ public class PlayerStats : CharacterStats {
 	void Start ()
     {
         angerStatus = sadStatus = fearStatus = happinessStatus = 0;
-        paralyzed = slowed = confused = poisoned = burning = false;        
+        stunned = slowed = confused = Burning = false;        
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	public override void Update () {
+        base.Update();
 	}
 
 

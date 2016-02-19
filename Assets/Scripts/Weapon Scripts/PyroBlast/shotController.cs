@@ -46,8 +46,11 @@ public class shotController : Hitbox {
             print(LayerMask.LayerToName(collision.gameObject.layer));
 
             CharacterStats collisionStat = collision.gameObject.GetComponent<CharacterStats>();
-            if (collisionStat != null)            
+            if (collisionStat != null)
+            {
                 collisionStat.TakeDamage(20);
+                collisionStat.setBurning(true);
+            }
             Destroy(gameObject);
         }
     }
