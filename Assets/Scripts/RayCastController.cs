@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 
 //Requires a Collider
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 
 public class RayCastController : MonoBehaviour {
 
@@ -24,14 +24,14 @@ public class RayCastController : MonoBehaviour {
     [HideInInspector] public float verticalSpacing;
 
     [HideInInspector]
-    public BoxCollider2D collision;
+    public Collider2D collision;
     public RaycastOrigins raycastOrigins;
 
 
 
     public virtual void Awake()
     {
-        collision = GetComponent<BoxCollider2D>();
+        collision = GetComponent<Collider2D>();
     }
 
     public virtual void Start()

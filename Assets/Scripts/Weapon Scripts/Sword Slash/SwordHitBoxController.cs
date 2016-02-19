@@ -15,7 +15,7 @@ public class SwordHitBoxController : Hitbox {
     
     //Player-retrived information
     BoxCollider2D box;
-    public CharacterController playerInformation;
+    public SimpleCharacterController playerInformation;
     Animator playerAnim;
 
     public override void Start () {

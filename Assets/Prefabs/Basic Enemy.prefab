@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLocation: {fileID: 0}
   detectionDistance: 4
+  detectionFOV: 0
 --- !u!114 &11469152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,7 +174,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 4
   jumpTime: 0.5
-  moveSpeed: 6
+  moveSpeed: 1
   isControllable: 0
   maintainVelocity: 0
   facingRight: 0
@@ -182,7 +183,6 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 768
-  speed: 1
 --- !u!114 &11487966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +236,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 384443bce756b9448b4c989ea5e91c24, type: 2}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167042}

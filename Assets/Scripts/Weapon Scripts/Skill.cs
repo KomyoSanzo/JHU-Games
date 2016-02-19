@@ -14,13 +14,13 @@ public class Skill : MonoBehaviour {
 
     //Required Components from Players
     [HideInInspector] public Animator animator;
-    [HideInInspector] public CharacterController playerInformation;
+    [HideInInspector] public SimpleCharacterController playerInformation;
 
     //Obtain components from player
     void Start ()
     {
         animator = GetComponentInParent<Animator>();
-        playerInformation = GetComponentInParent<CharacterController>();
+        playerInformation = GetComponentInParent<SimpleCharacterController>();
 	}
 	
 	

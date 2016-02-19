@@ -10,7 +10,7 @@ using System.Collections;
 [RequireComponent (typeof (Controller2D))]
 
 
-public class PlayerScript : CharacterController
+public class PlayerScript : SimpleCharacterController
 {
     //WEANING DIRECTION CHANGES 
     float accelerationTimeAirborne = .2f;

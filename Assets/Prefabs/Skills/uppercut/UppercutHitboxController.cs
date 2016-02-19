@@ -5,7 +5,7 @@ public class UppercutHitboxController : Hitbox
 {
 
     BoxCollider2D box;
-    public CharacterController playerInformation;
+    public SimpleCharacterController playerInformation;
     public Animator playerAnim;
 
 	public override void Start ()
@@ -35,8 +35,9 @@ public class UppercutHitboxController : Hitbox
                 collision.gameObject.GetComponent<CharacterStats>().setStun(true, 2f);
                 collision.gameObject.GetComponent<CharacterController>().velocity.y += 20f;
                 collision.gameObject.GetComponent<CharacterController>().velocity.x = 0;
+
                 collision.gameObject.transform.Translate(Vector3.up * .5f);
-                collision.gameObject.GetComponent<CharacterController>().controller.collisions.below = false;
+                collision.gameObject.GetComponent<SimpleCharacterController>().controller.collisions.below = false;
 
 
             }

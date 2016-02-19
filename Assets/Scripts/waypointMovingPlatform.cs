@@ -7,12 +7,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using Pathfinding;
 
 public class waypointMovingPlatform : RayCastController
 {
     //
     public LayerMask passengerMask;
-    
+
     //PUBLIC SPEED INFORMATION
     public float speed = 1.0F;
     public float easingValue = 2.0F;
@@ -44,18 +45,22 @@ public class waypointMovingPlatform : RayCastController
     //PASSENGER INFORMATION
     List<PassengerMovement> pMovements;
     Dictionary<Transform, Controller2D> pDict = new Dictionary<Transform, Controller2D>();
+    Bounds movingPlatformBounds;
+
+    public float updateRate = 2f;
+
+    private GraphUpdateObject guo;
 
     public override void Start()
     {
         base.Start();
         currentStartPoint = 0;
         SetPoints();
-
     }
 
     void SetPoints()
-    { 
-        if(currentStartPoint == waypoints.Length-1)
+    {
+        if (currentStartPoint == waypoints.Length - 1)
         {
             if (loop)
             {
@@ -69,9 +74,9 @@ public class waypointMovingPlatform : RayCastController
             {
                 isStopped = true;
             }
-            
-        } 
-        if(isStopped == false)
+
+        }
+        if (isStopped == false)
         {
             startMarker = waypoints[currentStartPoint % waypoints.Length].transform;
             endMarker = waypoints[(currentStartPoint + 1) % waypoints.Length].transform;
@@ -86,7 +91,7 @@ public class waypointMovingPlatform : RayCastController
         {
 
             Vector3 velocity = calculatePlatformMovement();
-            
+
             //Willis's Code calls
             UpdateRaycastOrigins();
             CalculateMovement(velocity);
@@ -94,11 +99,7 @@ public class waypointMovingPlatform : RayCastController
             transform.Translate(velocity);
             MovePassengers(false);
 
-            //Continue the journey to the next waypoint
-            
         }
-        
-
     }
 
     Vector3 calculatePlatformMovement ()
