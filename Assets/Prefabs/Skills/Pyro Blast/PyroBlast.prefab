@@ -44,7 +44,7 @@ MonoBehaviour:
   cooldown: 3
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
-  shotPrefab: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
+  shotPrefab: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
   projectileSpeed: 3
 --- !u!1001 &100100000
 Prefab:
@@ -76,7 +76,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: shotPrefab
       value: 
-      objectReference: {fileID: 479278, guid: 06042106137534e4cb6e844ac1d2499e, type: 2}
+      objectReference: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
     - target: {fileID: 0}
       propertyPath: m_Name
       value: Firum
