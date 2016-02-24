@@ -9,9 +9,13 @@ using System.Collections;
 public class PyroBlastController : Skill {
     
     //Set the ability's basic information and hitbox generator
-    public Transform shotPrefab;
     public float projectileSpeed = 5f;
     
+
+    public override void Start()
+    {
+        base.Start();
+    }
     /**
      * An overriden method that activates the ability from the weapon controller.
      */
@@ -35,7 +39,7 @@ public class PyroBlastController : Skill {
     {
         base.endChannel();
         //Instantiate the fireball prefab
-        Transform shotTransform = Instantiate(shotPrefab.transform) as Transform;
+        Transform shotTransform = Instantiate(hitbox.transform) as Transform;
         
         //Adjust the positioning and the direction of the prefab
         shotTransform.position = playerInformation.transform.position;

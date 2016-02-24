@@ -6,7 +6,7 @@ using System.Collections;
 public class AIMoveScript : SimpleCharacterController {
     public LayerMask collisionMask;
     
-        
+       
     Transform myTrans;
     float myWidth, myHeight;
     SpriteRenderer mySprite;
@@ -21,17 +21,21 @@ public class AIMoveScript : SimpleCharacterController {
 
     BoxCollider2D bounds;
 
+    EnemyStats stats;
+
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
         base.Start();
         myTrans = this.transform;
         mySprite = this.GetComponent<SpriteRenderer>();
         bounds = this.GetComponent<BoxCollider2D>();
         myWidth = bounds.bounds.extents.x;
         myHeight = bounds.bounds.extents.y;
-        gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
+        gravity = -1 * (2 * maxJumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpVelocity = Mathf.Abs(gravity) * jumpTime;
         maintainVelocity = true;
+        stats = GetComponent<EnemyStats>();
+
 	}
 
 
@@ -77,7 +81,7 @@ public class AIMoveScript : SimpleCharacterController {
         //If character should continue
         if (maintainVelocity)
         {
-            velocity.x = moveSpeed;
+            velocity.x = stats.speedCalculation(moveSpeed);
 
         } else
         {
@@ -85,6 +89,7 @@ public class AIMoveScript : SimpleCharacterController {
         }
 
         velocity.y += gravity * Time.deltaTime;
+
 
         controller.Move(velocity * Time.deltaTime);
     }

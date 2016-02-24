@@ -34,8 +34,6 @@ GameObject:
   - 114: {fileID: 11471216}
   - 199: {fileID: 19900446}
   - 198: {fileID: 19858378}
-  - 114: {fileID: 11465556}
-  - 114: {fileID: 11411326}
   m_Layer: 8
   m_Name: mcPlaceholder
   m_TagString: Player
@@ -323,20 +321,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
   hitboxPrefab: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
---- !u!114 &11411326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2214c4a96c09f74ba27b9cb839423d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  burnPercentage: 0.05
-  confused: 0
 --- !u!114 &11425860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -414,17 +398,6 @@ MonoBehaviour:
   playerInformation: {fileID: 0}
   shotPrefab: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
   projectileSpeed: 3
---- !u!114 &11465556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64ab9665f3010d458984399927da947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11467492
 MonoBehaviour:
   m_ObjectHideFlags: 1

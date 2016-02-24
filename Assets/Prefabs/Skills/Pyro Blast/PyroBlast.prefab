@@ -42,9 +42,9 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 3a17abbc6504f7b46a04ad9810998606, type: 3}
   skillName: Firum
   cooldown: 3
+  hitbox: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
-  shotPrefab: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
   projectileSpeed: 3
 --- !u!1001 &100100000
 Prefab:
@@ -89,6 +89,10 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192936}

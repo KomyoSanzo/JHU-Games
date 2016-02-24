@@ -12,12 +12,14 @@ public class Skill : MonoBehaviour {
     public string skillName;
     public float cooldown;
 
+    public Transform hitbox;
+
     //Required Components from Players
     [HideInInspector] public Animator animator;
     [HideInInspector] public SimpleCharacterController playerInformation;
 
     //Obtain components from player
-    void Start ()
+    public virtual void Start ()
     {
         animator = GetComponentInParent<Animator>();
         playerInformation = GetComponentInParent<SimpleCharacterController>();

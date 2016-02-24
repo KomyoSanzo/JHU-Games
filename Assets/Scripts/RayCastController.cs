@@ -13,6 +13,7 @@ public class RayCastController : MonoBehaviour {
 
     //The layer to check against
     public LayerMask collisionMask;
+    public LayerMask dodgeMask;
 
     //Public variables
     public const float skinWidth = .015f;

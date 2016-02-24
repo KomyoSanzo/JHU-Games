@@ -14,10 +14,14 @@ public class WeaponController : MonoBehaviour {
     private KeyCode[] inputCodes;
     private int currentAbility;
     private GameObject activeSkill;
+    private float internalCooldown;
+    private float INTERNALMAXCOOLDOWN = .2f;
 
     //PLAYER COMPONENTS
     Animator animator;
     PlayerScript playerInformation;
+
+
 
     void Start ()
     {
@@ -54,24 +58,34 @@ public class WeaponController : MonoBehaviour {
         //Routines
         UpdateSkillCooldowns();
 
-        //Cycle through all abilities
-        for (int i = 0; i <skills.Length; i++)
+
+        if (internalCooldown >= 0)
         {
-            //Check if ability is off cooldown
-            if (checkSkill(i))
+            internalCooldown -= Time.deltaTime;
+        }
+        else
+        {
+            //Cycle through all abilities
+            for (int i = 0; i < skills.Length; i++)
             {
-                //Check if the player is capable of executing an ability. 
-                if (Input.GetKeyDown(inputCodes[i])
-                    && playerInformation.isControllable 
-                    && !animator.GetCurrentAnimatorStateInfo(0).IsTag("ability"))
+                //Check if ability is off cooldown
+                if (checkSkill(i))
                 {
-                    //activate, reset cooldowns, and set active ability
-                    currentAbility = i;
-                    skills[i].Activate();
-                    currentCooldowns[i] = skills[i].cooldown;
+                    //Check if the player is capable of executing an ability. 
+                    if (Input.GetKeyDown(inputCodes[i])
+                        && playerInformation.isControllable
+                        && !animator.GetCurrentAnimatorStateInfo(0).IsTag("ability"))
+                    {
+                        //activate, reset cooldowns, and set active ability
+                        currentAbility = i;
+                        skills[i].Activate();
+                        currentCooldowns[i] = skills[i].cooldown;
+                        internalCooldown = INTERNALMAXCOOLDOWN;
+                    }
                 }
             }
         }
+        
 	}
 
 

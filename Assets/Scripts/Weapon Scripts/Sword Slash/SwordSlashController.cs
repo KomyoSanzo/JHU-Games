@@ -8,8 +8,7 @@ using System.Collections;
 
 public class SwordSlashController : Skill {
     //The hitbox to be instantiated
-    public Transform hitbox;
-
+    
 
 	public override void Activate()
     {

@@ -42,6 +42,7 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 3230f207276a4ec48bd3dca6ce8b961f, type: 3}
   skillName: Tatsumaki
   cooldown: 3
+  hitbox: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
 --- !u!1001 &100100000
@@ -67,6 +68,10 @@ Prefab:
       propertyPath: icon
       value: 
       objectReference: {fileID: 2800000, guid: 3230f207276a4ec48bd3dca6ce8b961f, type: 3}
+    - target: {fileID: 0}
+      propertyPath: hitbox
+      value: 
+      objectReference: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192454}

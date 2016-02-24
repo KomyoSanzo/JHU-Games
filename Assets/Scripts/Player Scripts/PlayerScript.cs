@@ -31,7 +31,8 @@ public class PlayerScript : SimpleCharacterController
 
     //INTERNAL VARIABLE DECLARATIONS
     float gravity;
-    float jumpVelocity;
+    float maxJumpVelocity;
+    float minJumpVelocity;
 
     
     //UNUSED VARIABLES (FOR LATER IMPLEMENTATION)
@@ -40,16 +41,18 @@ public class PlayerScript : SimpleCharacterController
     protected override void Start()
     {
         base.Start();
-        gravity = -1 * (2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
-        jumpVelocity = Mathf.Abs(gravity) * jumpTime;
-        print("Gravity: " + gravity + " Jump Velocity: " + jumpVelocity);
+        gravity = -1 * (2 * maxJumpHeight) / Mathf.Pow(jumpTime, 2);
+        maxJumpVelocity = Mathf.Abs(gravity) * jumpTime;
+        minJumpHeight = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
+
         playerStats = GetComponent<PlayerStats>(); 
     }
 
     void Update()
     {
         
-        CheckDash(); //Dashing is placed in Update due to more consistent input reading
+        if (!anim.GetBool("inUncancelableAttack"))
+            CheckDash(); //Dashing is placed in Update due to more consistent input reading
         
         //Check if player is in midair or not
         if (!controller.collisions.below && velocity.y != 0)
@@ -99,14 +102,19 @@ public class PlayerScript : SimpleCharacterController
         if (!maintainVelocity)
         {
             //Check if player is controllable. If so, then input is based on the Input parameter. Else, set to 0.
-            if (isControllable)
+            if (isControllable && !anim.GetBool("inFullChannel"))
                 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             else
                 input = new Vector2(0, 0);
 
             //Check if the player is jumping
-            if (Input.GetKey(KeyCode.Space) && controller.collisions.below)
+            if (Input.GetKey(KeyCode.Space) && controller.collisions.below && !anim.GetBool("inFullChannel"))
                 Jump();
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                if (velocity.y > minJumpVelocity)
+                    velocity.y = minJumpVelocity;
+            }
             
             //Check if walking by seeing if there exists a ground and a horizontal input
             if (input.x != 0 && controller.collisions.below)
@@ -224,7 +232,7 @@ public class PlayerScript : SimpleCharacterController
      */
     void Jump()
     {
-        velocity.y = jumpVelocity;
+        velocity.y = maxJumpVelocity;
         audioPlayer.clip = audioClips[6];
         audioPlayer.Play();
     }
@@ -246,6 +254,7 @@ public class PlayerScript : SimpleCharacterController
         gravityModifier = 0;
         isControllable = false;
         maintainVelocity = true;
+        playerStats.setInvincible(true);
 
         //Force the animator to play the dashing animation
         anim.SetBool("dashing", true);
@@ -264,6 +273,8 @@ public class PlayerScript : SimpleCharacterController
         //Return control to player and clean up coroutine.
         isControllable = true;
         maintainVelocity = false;
+        playerStats.setInvincible(false);
+
         gravityModifier = 1;
         anim.SetBool("dashing", false);
     }

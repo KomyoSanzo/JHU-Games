@@ -7,14 +7,12 @@ using UnityEngine;
 using System.Collections;
 
 public class UppercutController : Skill{
-    public Transform hitboxPrefab;
     AudioSource audioPlayer;
 
-    void Start()
+    public override void Start()
     {
         //Obtain information from player
-        animator = GetComponentInParent<Animator>();
-        playerInformation = GetComponentInParent<PlayerScript>(); 
+        base.Start();
         audioPlayer = GetComponent<AudioSource>();
     }
 
@@ -64,7 +62,7 @@ public class UppercutController : Skill{
 
 
         //Creates the hitbox
-        Transform uppercutHitBox = Instantiate(hitboxPrefab.transform) as Transform;
+        Transform uppercutHitBox = Instantiate(hitbox.transform) as Transform;
         UppercutHitboxController newHitbox = uppercutHitBox.gameObject.GetComponent<UppercutHitboxController>();
 
         newHitbox.ownerTag = this.transform.parent.gameObject.tag;

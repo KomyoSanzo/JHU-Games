@@ -11,7 +11,9 @@ public class CharacterStats : MonoBehaviour {
     protected float currentBurnTime;
     protected float currentTickTime;
 
-    protected bool targetable;
+    private string gameLayer;
+    private LayerMask gameMask;
+    private LayerMask dodgeMask;
 
     protected bool stunned;
     protected bool slowed;
@@ -34,6 +36,30 @@ public class CharacterStats : MonoBehaviour {
         }
     }
 
+    private bool targetable = true;
+    public bool Targetable
+    {
+        get
+        {
+            return targetable;
+        }
+        set
+        {
+            targetable = value;
+            if (!targetable)
+            {
+                gameObject.layer = LayerMask.NameToLayer(gameLayer + " Dodge");
+                gameObject.GetComponent<Controller2D>().collisionMask = dodgeMask;
+            }
+            else
+            {
+                gameObject.layer = LayerMask.NameToLayer(gameLayer);         
+                gameObject.GetComponent<Controller2D>().collisionMask = gameMask;
+            }                
+        }
+    }
+    
+
     private float test = 0;
 
     void setBurn()
@@ -44,6 +70,14 @@ public class CharacterStats : MonoBehaviour {
         test = 5;
     }
 
+    public virtual void Start()
+    {
+        stunned = slowed = burning = confused = false;
+        targetable = true;
+        gameLayer = LayerMask.LayerToName(gameObject.layer);
+        gameMask = gameObject.GetComponent<Controller2D>().collisionMask;
+        dodgeMask = gameObject.GetComponent<Controller2D>().dodgeMask;
+    }
     public virtual void Update ()
     {
         if (currentBurnTime > 0)
@@ -74,7 +108,8 @@ public class CharacterStats : MonoBehaviour {
 
     public virtual void TakeDamage(float damage)
     {
-        Health -= damage;
+        if (targetable)
+            Health -= damage;
     }
 
     public float speedCalculation(float speed)
@@ -140,5 +175,8 @@ public class CharacterStats : MonoBehaviour {
         Burning = status;
     }
 
-
+    public void setInvincible (bool status)
+    {
+        Targetable = !status;
+    }
 }

@@ -16,8 +16,9 @@ public class PlayerStats : CharacterStats {
     float speedModifier = 1f;
     float jumpModifier = 1f;
 
-	void Start ()
+	public override void Start ()
     {
+        base.Start();
         angerStatus = sadStatus = fearStatus = happinessStatus = 0;
         stunned = slowed = confused = Burning = false;        
 	}

@@ -19,7 +19,9 @@ public class SimpleCharacterController : MonoBehaviour {
     protected float velocityXSmoothing;
 
     //PHYSICS AND GRAVITY INFORMATION
-    public float jumpHeight = 4;
+    public float maxJumpHeight = 4;
+    public float minJumpHeight = 1;
+
     public float jumpTime = .4f;
     public float moveSpeed = 6;
 
