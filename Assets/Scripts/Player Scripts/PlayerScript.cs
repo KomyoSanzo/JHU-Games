@@ -14,7 +14,7 @@ public class PlayerScript : SimpleCharacterController
 {
     //WEANING DIRECTION CHANGES 
     float accelerationTimeAirborne = .2f;
-    float accelerationTimeGrounded = .1f;
+    float accelerationTimeGrounded = .2f;
 
 
     //DASHING INFORMATION

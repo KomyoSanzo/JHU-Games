@@ -8,7 +8,8 @@ public class BlizzagaHitBoxController : Hitbox {
     Animator playerAnim;
 
 	// Use this for initialization
-	public override void Start () {
+	public override void Start ()
+    {
         base.Start();
         box = GetComponent<BoxCollider2D>();
 
@@ -20,7 +21,6 @@ public class BlizzagaHitBoxController : Hitbox {
 	// Update is called once per frame
 	void Update () {
         transform.position = playerInformation.gameObject.transform.position;
-
         if (!playerAnim.GetCurrentAnimatorStateInfo(0).IsName("blizzaga"))
         {
             Destroy(gameObject);
