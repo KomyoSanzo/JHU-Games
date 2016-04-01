@@ -61,8 +61,8 @@ public class AIAttackController : MonoBehaviour {
         Gizmos.DrawLine(this.transform.position, vectorTo);
         float hypotenuse = vectorTo.x / Mathf.Cos(detectionFOV);
         Vector3 arcStart = new Vector3(0, 0, -hypotenuse);
-        UnityEditor.Handles.color = Color.red;
-        UnityEditor.Handles.DrawWireArc(this.transform.position, size, arcStart, 30, 5);
+        //UnityEditor.Handles.color = Color.red;
+        //UnityEditor.Handles.DrawWireArc(this.transform.position, size, arcStart, 30, 5);
     }
 
     /// <summary>

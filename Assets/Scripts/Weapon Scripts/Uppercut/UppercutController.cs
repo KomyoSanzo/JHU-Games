@@ -81,12 +81,18 @@ public class UppercutController : Skill{
 
         //Move player slightly up to avoid moving platform collisions
         playerInformation.gameObject.transform.Translate(Vector3.up*.5f);
-        
+
         //Check the direction of the player and set the upward velocity
         if (playerInformation.facingRight)
-            playerInformation.velocity = new Vector2(1f, 10f);
+        {
+            //playerInformation.velocity = new Vector2(1f, 10f);
+            playerInformation.velocity = new Vector2(1f, .5f*playerInformation.velocity.x + 2.0f);
+        }
         else
-            playerInformation.velocity = new Vector2(-1f, 10f);
+        {
+            //playerInformation.velocity = new Vector2(-1f, 10f);
+            playerInformation.velocity = new Vector2(-1f, -.5f*playerInformation.velocity.x + 2.0f);
+        }
 
         //Wait for the animation to complete, then return control
         //TO BE IMPLEMENTED: Make the duration dependent on the GetCurrentAnimatorClipInfo length

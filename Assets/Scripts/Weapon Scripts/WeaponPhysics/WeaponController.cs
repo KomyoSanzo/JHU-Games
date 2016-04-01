@@ -35,12 +35,12 @@ public class WeaponController : MonoBehaviour {
 
         //Set controls. 
         //TO BE IMPLEMENTED: Inherit this from an InputController
-        inputCodes = new KeyCode[4];
+        inputCodes = new KeyCode[5];
         inputCodes[0] = KeyCode.Q;
         inputCodes[1] = KeyCode.W;
         inputCodes[2] = KeyCode.E;
         inputCodes[3] = KeyCode.R;
-
+        inputCodes[4] = KeyCode.T;
 
         //Set cooldowns
         currentCooldowns = new float[skills.Length];
