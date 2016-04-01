@@ -2138,7 +2138,12 @@ Prefab:
       propertyPath: cooldown
       value: 0.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11498350, guid: bb8cce13c48d23145ba77b2ad793941d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11498350, guid: bb8cce13c48d23145ba77b2ad793941d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bb8cce13c48d23145ba77b2ad793941d, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &484378659 stripped
@@ -10483,7 +10488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 981117931}
-  areaSize: {x: 5, y: 5}
+  areaSize: {x: 15, y: 5}
   lookAheadXDistance: 3
   lookSmoothXTime: 0.5
   lookSmoothYTime: 0.5
@@ -10840,6 +10845,27 @@ Prefab:
     - {fileID: 11428564, guid: 18be9a6e33362194885ac3934db31826, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 18be9a6e33362194885ac3934db31826, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2101330690 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 120822, guid: bb8cce13c48d23145ba77b2ad793941d, type: 2}
+  m_PrefabInternal: {fileID: 470755232}
+--- !u!114 &2101330691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2101330690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef28821a67389794b8714e5a08a60a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: fd2e8df14e34fae4dafc3c57081bab75, type: 3}
+  skillName: Fulgur Gladium
+  cooldown: 0.3
+  hitbox: {fileID: 486544, guid: 141f3fedb99e55a41b15b51418701ab1, type: 2}
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
 --- !u!1001 &2125011251
 Prefab:
   m_ObjectHideFlags: 0
