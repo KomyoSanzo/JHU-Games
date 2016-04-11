@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &113194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 469786}
-  - 114: {fileID: 11425860}
-  m_Layer: 0
-  m_Name: swordSlash
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &114530
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,32 +25,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &169482
+--- !u!1 &130924
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 440944}
-  - 114: {fileID: 11458608}
-  m_Layer: 0
-  m_Name: PyroBlast
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &199396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 419324}
-  - 114: {fileID: 11404312}
-  - 82: {fileID: 8205000}
+  - 4: {fileID: 438404}
+  - 114: {fileID: 11414260}
+  - 82: {fileID: 8299940}
   m_Layer: 0
   m_Name: uppercut
   m_TagString: Untagged
@@ -74,42 +42,134 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &419324
+--- !u!1 &151844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444758}
+  - 114: {fileID: 11444948}
+  m_Layer: 0
+  m_Name: PyroBlast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &173556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421832}
+  - 114: {fileID: 11477610}
+  - 82: {fileID: 8288542}
+  m_Layer: 9
+  m_Name: AirBulletSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &177106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 481334}
+  - 114: {fileID: 11474320}
+  - 82: {fileID: 8252458}
+  m_Layer: 0
+  m_Name: Blizzaga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &194434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 465526}
+  - 60: {fileID: 6049976}
+  - 114: {fileID: 11428414}
+  - 50: {fileID: 5065426}
+  m_Layer: 11
+  m_Name: teleportSlash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421832
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199396}
+  m_GameObject: {fileID: 173556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499740}
+  m_RootOrder: 4
+--- !u!4 &438404
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.015762, y: -2.41968, z: 0.01953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499740}
   m_RootOrder: 2
---- !u!4 &440944
+--- !u!4 &444758
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169482}
+  m_GameObject: {fileID: 151844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.17, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.5327836, y: 0.5327836, z: 0.5327836}
+  m_LocalPosition: {x: -189.84021, y: -18.224037, z: 0.054564174}
+  m_LocalScale: {x: 1.8051997, y: 1.8051997, z: 1.8051997}
   m_Children: []
   m_Father: {fileID: 499740}
   m_RootOrder: 0
---- !u!4 &469786
+--- !u!4 &465526
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113194}
+  m_GameObject: {fileID: 194434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.907201, y: 8.613184, z: 2.894041}
+  m_LocalPosition: {x: 20.66, y: -0.97, z: 4.734375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499740}
   m_RootOrder: 1
+--- !u!4 &481334
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177106}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.39467, y: 3.1114852, z: 57.37352}
+  m_LocalScale: {x: 3.3882418, y: 3.3882418, z: 3.3882418}
+  m_Children: []
+  m_Father: {fileID: 499740}
+  m_RootOrder: 3
 --- !u!4 &499740
 Transform:
   m_ObjectHideFlags: 1
@@ -120,11 +180,47 @@ Transform:
   m_LocalPosition: {x: 23.07, y: -0.06, z: 0.01999998}
   m_LocalScale: {x: 0.29513833, y: 0.29513833, z: 0.29513833}
   m_Children:
-  - {fileID: 440944}
-  - {fileID: 469786}
-  - {fileID: 419324}
+  - {fileID: 444758}
+  - {fileID: 465526}
+  - {fileID: 438404}
+  - {fileID: 481334}
+  - {fileID: 421832}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5065426
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194434}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &6049976
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 7.3908634, y: 15.582463}
+      - {x: 7.088352, y: -1.7052543}
+      - {x: -20.561136, y: -1.2528703}
 --- !u!61 &6109810
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -139,16 +235,90 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.5, y: 6}
---- !u!82 &8205000
+--- !u!82 &8237402
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199396}
+  m_GameObject: {fileID: 114530}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 933581c70a162f84a8104bd1ec1f25ab, type: 3}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &8252458
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177106}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 444d35d688153b34fa25d4f45d97b859, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -201,7 +371,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -213,17 +383,91 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &8237402
+--- !u!82 &8288542
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114530}
+  m_GameObject: {fileID: 173556}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 82888a4a033c6724e8f04c336764fb9d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &8299940
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130924}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 933581c70a162f84a8104bd1ec1f25ab, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -304,12 +548,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11404312
+--- !u!114 &11414260
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199396}
+  m_GameObject: {fileID: 130924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: affcf0bcc1c4d9646a9991a0af6a2937, type: 3}
@@ -318,26 +562,27 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 3230f207276a4ec48bd3dca6ce8b961f, type: 3}
   skillName: Tatsumaki
   cooldown: 3
+  hitbox: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
-  hitboxPrefab: {fileID: 425396, guid: f57dd7e89503104428eaec19b5ac23b1, type: 2}
---- !u!114 &11425860
+--- !u!114 &11428414
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 113194}
+  m_GameObject: {fileID: 194434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5b9eb8c58884641a81fa2f1920ea52, type: 3}
+  m_Script: {fileID: 11500000, guid: ef28821a67389794b8714e5a08a60a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: fd2e8df14e34fae4dafc3c57081bab75, type: 3}
-  skillName: Fulgur Gladium
+  skillName: Fulgur Gladum
   cooldown: 2
+  hitbox: {fileID: 486544, guid: 141f3fedb99e55a41b15b51418701ab1, type: 2}
   animator: {fileID: 0}
   playerInformation: {fileID: 0}
-  hitbox: {fileID: 486544, guid: 141f3fedb99e55a41b15b51418701ab1, type: 2}
+  target: {fileID: 0}
 --- !u!114 &11441522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,6 +594,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64ab9665f3010d458984399927da947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11444948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed7776ef842038429d2557b0b893bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 3a17abbc6504f7b46a04ad9810998606, type: 3}
+  skillName: Firum
+  cooldown: 3
+  hitbox: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+  projectileSpeed: 3
 --- !u!114 &11456400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,34 +633,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbf1258bb9925534fbca5c9b63411c79, type: 3}
   - {fileID: 8300000, guid: 1c99fa202ad6f8844906e875b13cb3bf, type: 3}
   velocity: {x: 0, y: 0, z: 0}
-  jumpHeight: 4
-  jumpTime: 0.4
+  maxJumpHeight: 3
+  minJumpHeight: 1
+  jumpTime: 0.5
   moveSpeed: 10
   isControllable: 1
   maintainVelocity: 0
   facingRight: 0
   controller: {fileID: 0}
   gravityModifier: 1
-  dashCooldown: 0.1
+  dashCooldown: 0.5
   isAttacking: 0
---- !u!114 &11458608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed7776ef842038429d2557b0b893bb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: 3a17abbc6504f7b46a04ad9810998606, type: 3}
-  skillName: Firum
-  cooldown: 3
-  animator: {fileID: 0}
-  playerInformation: {fileID: 0}
-  shotPrefab: {fileID: 479278, guid: 360a5143e96a70044a0e23112cf11236, type: 2}
-  projectileSpeed: 3
 --- !u!114 &11467492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,6 +658,9 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 1536
+  dodgeMask:
+    serializedVersion: 2
+    m_Bits: 512
   horizontalRayCount: 4
   verticalRayCount: 4
   horizontalSpacing: 0
@@ -430,9 +679,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2214c4a96c09f74ba27b9cb839423d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 200
   burnPercentage: 0.05
   confused: 0
+--- !u!114 &11474320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3613b3adf23444781d7b839f5ff63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 87bea272733dddc4085cf774c8609e57, type: 3}
+  skillName: Blizzaga
+  cooldown: 5
+  hitbox: {fileID: 468822, guid: 7b48ecb0e7806824d8b8fab18a11bf1c, type: 2}
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+--- !u!114 &11477610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c464de03c030484595990231f51ca60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: eac3e9968ed83ee4eb90180e51f0f228, type: 3}
+  skillName: Air Bullets
+  cooldown: 0.05
+  hitbox: {fileID: 428074, guid: 8e57fa1f4286d554e8935c82176484f1, type: 2}
+  animator: {fileID: 0}
+  playerInformation: {fileID: 0}
+  projectileSpeed: 5
+  MaxAngle: 30
+  bulletCount: 3
 --- !u!198 &19858378
 ParticleSystem:
   m_ObjectHideFlags: 1

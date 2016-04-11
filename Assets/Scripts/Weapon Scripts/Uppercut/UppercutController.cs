@@ -86,12 +86,12 @@ public class UppercutController : Skill{
         if (playerInformation.facingRight)
         {
             //playerInformation.velocity = new Vector2(1f, 10f);
-            playerInformation.velocity = new Vector2(1f, .5f*playerInformation.velocity.x + 2.0f);
+            playerInformation.velocity = new Vector2(playerInformation.velocity.x, .5f*playerInformation.velocity.x + 2.0f);
         }
         else
         {
             //playerInformation.velocity = new Vector2(-1f, 10f);
-            playerInformation.velocity = new Vector2(-1f, -.5f*playerInformation.velocity.x + 2.0f);
+            playerInformation.velocity = new Vector2(playerInformation.velocity.x, -.5f*playerInformation.velocity.x + 2.0f);
         }
 
         //Wait for the animation to complete, then return control
