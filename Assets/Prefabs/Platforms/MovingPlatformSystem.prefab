@@ -220,6 +220,7 @@ MonoBehaviour:
   - {fileID: 162548}
   - {fileID: 170748}
   - {fileID: 170480}
+  updateRate: 2
 --- !u!212 &21271660
 SpriteRenderer:
   m_ObjectHideFlags: 1
