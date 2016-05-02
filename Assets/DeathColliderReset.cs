@@ -10,6 +10,6 @@ public class DeathColliderReset : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered");
-        other.gameObject.transform.position = spawnPoint.transform.position;
+        other.transform.position = spawnPoint.transform.position;
     }
 }
