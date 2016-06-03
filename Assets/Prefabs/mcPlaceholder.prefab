@@ -661,7 +661,7 @@ MonoBehaviour:
   dodgeMask:
     serializedVersion: 2
     m_Bits: 512
-  horizontalRayCount: 4
+  horizontalRayCount: 8
   verticalRayCount: 4
   horizontalSpacing: 0
   verticalSpacing: 0

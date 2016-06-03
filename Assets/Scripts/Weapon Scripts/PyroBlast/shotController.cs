@@ -55,6 +55,7 @@ public class shotController : Hitbox {
             {
                 collisionStat.TakeDamage(20);
                 collisionStat.setBurning(true);
+                collisionStat.hitStun();
             }
             Destroy(gameObject);
         }

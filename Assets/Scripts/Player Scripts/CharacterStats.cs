@@ -112,6 +112,10 @@ public class CharacterStats : MonoBehaviour {
             Health -= damage;
     }
 
+    public virtual void hitStun()
+    {
+
+    }
     public float speedCalculation(float speed)
     {
 
@@ -135,7 +139,7 @@ public class CharacterStats : MonoBehaviour {
     
 
 
-
+    
 
     public bool canMove()
     {

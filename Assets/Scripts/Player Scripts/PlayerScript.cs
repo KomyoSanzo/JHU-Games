@@ -13,8 +13,8 @@ using System.Collections;
 public class PlayerScript : SimpleCharacterController
 {
     //WEANING DIRECTION CHANGES 
-    float accelerationTimeAirborne = .2f;
-    float accelerationTimeGrounded = .2f;
+    float accelerationTimeAirborne = .1f;
+    float accelerationTimeGrounded = .0f;
 
 
     //DASHING INFORMATION
@@ -83,7 +83,7 @@ public class PlayerScript : SimpleCharacterController
      * Check if the orientation of the player and flips the sprite renderer if necessary
      */
     void checkFlip()
-    {   
+    {
         //Checks the current velocity of the player and the direction currently faced.
         if (velocity.x > 0 && !facingRight)
             Flip();
@@ -147,7 +147,7 @@ public class PlayerScript : SimpleCharacterController
      */
     void Flip()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("shootingAnimation") || anim.GetCurrentAnimatorStateInfo(0).IsName("swordStrike"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("shootingAnimation") || anim.GetCurrentAnimatorStateInfo(0).IsName("swordStrike") || !isControllable)
             return;
         facingRight = !facingRight;
         Vector3 playerScale = transform.localScale;
